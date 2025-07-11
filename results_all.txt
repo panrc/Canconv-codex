@@ -1,0 +1,48 @@
+
+### GF2 ###
+  Full Res H5:
+    SAM: 0.7771
+    ERGAS: 213.5088
+    Q_avg: 0.3411
+    D_lambda: 0.0173
+    D_s: 0.3966
+    HQNR: 0.5930
+  Reduced Res H5:
+    SAM: 0.8066
+    ERGAS: 214.1558
+    Q_avg: 0.3199
+    D_lambda: 0.0179
+    D_s: 0.4111
+    HQNR: 0.5783
+
+### QB ###
+  Full Res H5:
+    SAM: 1.2982
+    ERGAS: 122.9377
+    Q_avg: 0.0800
+    D_lambda: 0.0288
+    D_s: 0.8574
+    HQNR: 0.1385
+  Reduced Res H5:
+    SAM: 1.3893
+    ERGAS: 116.1530
+    Q_avg: 0.0637
+    D_lambda: 0.0309
+    D_s: 0.9172
+    HQNR: 0.0803
+
+### WV3 ###
+  Full Res H5:
+    SAM: nan
+    ERGAS: 105.9658
+    Q_avg: 0.3710
+    D_lambda: nan
+    D_s: 0.1108
+    HQNR: nan
+  Reduced Res H5:
+    SAM: nan
+    ERGAS: 198.3949
+    Q_avg: 0.3279
+    D_lambda: nan
+    D_s: 0.1673
+    HQNR: nan

@@ -1,0 +1,26 @@
+{
+    "gf2": {
+        "model_weight": "runs/cannet_wv3_gf2/weights/best_model.pth",
+        "visualization": [
+            "runs/cannet_wv3_gf2/vis_reduced.png",
+            "runs/cannet_wv3_gf2/vis_full.png"
+        ],
+        "evaluation_log": "runs/cannet_wv3_gf2/eval_results.txt"
+    },
+    "qb": {
+        "model_weight": "runs/cannet_wv3_qb/weights/best_model.pth",
+        "visualization": [
+            "runs/cannet_wv3_qb/vis_reduced.png",
+            "runs/cannet_wv3_qb/vis_full.png"
+        ],
+        "evaluation_log": "runs/cannet_wv3_qb/eval_results.txt"
+    },
+    "wv3": {
+        "model_weight": "runs/cannet_wv3_wv3/weights/best_model.pth",
+        "visualization": [
+            "runs/cannet_wv3_wv3/vis_reduced.png",
+            "runs/cannet_wv3_wv3/vis_full.png"
+        ],
+        "evaluation_log": "runs/cannet_wv3_wv3/eval_results.txt"
+    }
+}

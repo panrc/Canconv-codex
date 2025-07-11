@@ -1,0 +1,22 @@
+2025-05-29 00:23:45,962 INFO Train script invoked with args: ['/home/panrc/project/CANConv-1/canconv/scripts/train.py', 'cannet', 'wv3']
+2025-05-29 00:23:45,964 INFO Begin to load kmeans operator...
+2025-05-29 00:23:45,969 INFO Finish loading kmeans operator.
+2025-05-29 00:23:45,970 INFO Loading custom op for conv_by_cluster...
+2025-05-29 00:23:48,198 INFO Seed set to 10
+2025-05-29 00:23:48,198 INFO Using device: cuda:0
+2025-05-29 00:23:49,946 INFO Model loaded.
+2025-05-29 00:23:59,662 INFO Dataset loaded.
+2025-05-29 00:23:59,662 INFO Output dir: runs/cannet_wv3_wv3
+2025-05-29 00:23:59,681 INFO Begin Training.
+2025-05-29 00:30:00,353 INFO Epoch 1: Running evaluation for early stopping...
+2025-05-29 00:30:00,353 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 00:30:08,020 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.16870937123758295), 'ERGAS': np.float64(82.69861609243785), 'Q_avg': np.float64(0.9834837857706411), 'D_lambda': np.float64(0.0037490971386129543), 'D_s': np.float64(0.021037854947464872), 'HQNR': np.float64(0.9752894181511931)}
+2025-05-29 00:30:08,024 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 00:31:29,304 INFO Full Res H5 Metrics: {'SAM': np.float64(0.16514182850672526), 'ERGAS': np.float64(18.601659163449007), 'Q_avg': np.float64(0.9847386519838857), 'D_lambda': np.float64(0.003669818411260562), 'D_s': np.float64(0.013930525530309924), 'HQNR': np.float64(0.9824515168860068)}
+2025-05-29 00:31:29,305 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 00:31:37,837 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.16957067235132767), 'ERGAS': np.float64(83.19829330507754), 'Q_avg': np.float64(0.983292133818123), 'D_lambda': np.float64(0.003768237163362837), 'D_s': np.float64(0.020885359893242545), 'HQNR': np.float64(0.9754225949708868)}
+2025-05-29 00:31:37,838 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 00:33:00,738 INFO Full Res MAT Metrics: {'SAM': np.float64(0.16514181723064988), 'ERGAS': np.float64(18.601657964990785), 'Q_avg': np.float64(0.9847386543800457), 'D_lambda': np.float64(0.003669818160681109), 'D_s': np.float64(0.013930524424682922), 'HQNR': np.float64(0.9824515182339318)}
+2025-05-29 00:33:00,738 INFO Epoch 1: Monitored metric (Reduced Res H5 ERGAS) = 82.6986
+2025-05-29 00:33:00,786 INFO Epoch 1: New best model saved to runs/cannet_wv3_wv3/weights/best_model.pth with Reduced Res H5 ERGAS: 82.6986
+2025-05-29 00:33:00,804 INFO Epoch 1 checkpoint saved

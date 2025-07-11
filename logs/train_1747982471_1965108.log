@@ -1,0 +1,31 @@
+2025-05-23 14:41:11,518 INFO Train script invoked with args: ['/home/panrc/project/CANConv-1/canconv/scripts/train.py', 'cannet', 'wv3']
+2025-05-23 14:41:11,520 INFO Begin to load kmeans operator...
+2025-05-23 14:41:11,522 INFO Finish loading kmeans operator.
+2025-05-23 14:41:11,522 INFO Loading custom op for conv_by_cluster...
+2025-05-23 14:41:12,577 INFO Seed set to 10
+2025-05-23 14:41:12,578 INFO Using device: cuda:0
+2025-05-23 14:42:05,350 INFO Model loaded.
+2025-05-23 14:42:05,353 ERROR [Errno 2] Unable to synchronously open file (unable to open file: name = '/dataset/training_wv3/train_wv3.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+Traceback (most recent call last):
+  File "/home/panrc/project/CANConv-1/canconv/scripts/train.py", line 58, in <module>
+    main(args.model_name, cfg, args.save_mat, args.preset, args.override)
+  File "/home/panrc/project/CANConv-1/canconv/scripts/train.py", line 25, in main
+    trainer.train()
+  File "/home/panrc/project/CANConv-1/canconv/util/trainer.py", line 126, in train
+    self._load_dataset()
+  File "/home/panrc/project/CANConv-1/canconv/util/trainer.py", line 74, in _load_dataset
+    self.train_dataset = H5PanDataset(self.cfg["train_data"])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/dataset/h5pan.py", line 30, in __init__
+    with h5py.File(file_path) as file:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/h5py/_hl/files.py", line 561, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/h5py/_hl/files.py", line 235, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 102, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = '/dataset/training_wv3/train_wv3.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)

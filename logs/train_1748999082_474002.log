@@ -1,0 +1,14 @@
+2025-06-04 09:04:42,433 INFO Train script invoked with args: ['/home/panrc/project/CANConv-1/canconv/scripts/train.py', 'cannet', 'wv3']
+2025-06-04 09:04:42,464 INFO Begin to load kmeans operator...
+2025-06-04 09:04:42,556 INFO Finish loading kmeans operator.
+2025-06-04 09:04:42,561 INFO Loading custom op for conv_by_cluster...
+2025-06-04 09:04:51,570 INFO Seed set to 10
+2025-06-04 09:04:51,571 INFO Using device: cuda:0
+2025-06-04 09:04:58,288 INFO Model loaded.
+2025-06-04 09:06:46,121 INFO Dataset loaded.
+2025-06-04 09:06:46,165 INFO Output dir: runs/cannet_wv3_wv3
+2025-06-04 09:06:46,348 INFO Begin Training.
+2025-06-04 09:32:28,863 INFO Epoch 1: Running evaluation for early stopping...
+2025-06-04 09:32:28,864 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-06-04 09:33:41,242 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.17021389020187844), 'ERGAS': np.float64(83.23284030263909), 'Q_avg': np.float64(0.9830948469768886), 'D_lambda': np.float64(0.003782530893375076), 'D_s': np.float64(0.02094114413762079), 'HQNR': np.float64(0.9753531989112192)}
+2025-06-04 09:33:41,244 INFO Evaluating on Full Resolution H5: dataset/full_examples

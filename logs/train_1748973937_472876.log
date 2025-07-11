@@ -1,0 +1,109 @@
+2025-06-04 02:05:37,340 INFO Train script invoked with args: ['/home/panrc/project/CANConv-1/canconv/scripts/train.py', 'cannet', 'wv3']
+2025-06-04 02:05:37,343 INFO Begin to load kmeans operator...
+2025-06-04 02:05:37,349 INFO Finish loading kmeans operator.
+2025-06-04 02:05:37,350 INFO Loading custom op for conv_by_cluster...
+2025-06-04 02:05:39,728 INFO Seed set to 10
+2025-06-04 02:05:39,728 INFO Using device: cuda:0
+2025-06-04 02:05:45,368 INFO Model loaded.
+2025-06-04 02:06:02,550 INFO Dataset loaded.
+2025-06-04 02:06:02,583 INFO Output dir: runs/cannet_wv3_wv3
+2025-06-04 02:06:02,717 INFO Begin Training.
+2025-06-04 02:06:04,524 ERROR expected scalar type Float but found Half
+Exception raised from check_type at /pytorch/build/aten/src/ATen/core/TensorMethods.cpp:12 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7ff20c5785e8 in /home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7ff20c50d4a2 in /home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #2: <unknown function> + 0x31a44a3 (0x7ff1f2a564a3 in /home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: float* at::TensorBase::mutable_data_ptr<float>() const + 0x20 (0x7ff1f2a57330 in /home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: PermuteFunction::forward(torch::autograd::AutogradContext*, at::Tensor, at::Tensor, int) + 0x2cd (0x7ff20cb5e13d in /home/panrc/project/CANConv-1/canconv/layers/pwac/pwacnative.so)
+frame #5: std::enable_if<is_same_v<PermuteFunction, PermuteFunction>, decltype (PermuteFunction::forward(decltype(nullptr), (declval<at::Tensor&>)(), (declval<at::Tensor&>)(), (declval<int&>)()))>::type torch::autograd::Function<PermuteFunction>::apply<PermuteFunction, at::Tensor&, at::Tensor&, int&>(at::Tensor&, at::Tensor&, int&) + 0x7dd (0x7ff20cb5ebcd in /home/panrc/project/CANConv-1/canconv/layers/pwac/pwacnative.so)
+frame #6: permute(at::Tensor, at::Tensor, int) + 0x2a (0x7ff20cb5a09a in /home/panrc/project/CANConv-1/canconv/layers/pwac/pwacnative.so)
+frame #7: <unknown function> + 0x3ad37 (0x7ff20cb0cd37 in /home/panrc/project/CANConv-1/canconv/layers/pwac/pwacnative.so)
+frame #8: <unknown function> + 0x364c1 (0x7ff20cb084c1 in /home/panrc/project/CANConv-1/canconv/layers/pwac/pwacnative.so)
+frame #9: python() [0x58208f]
+<omitting python frames>
+frame #12: python() [0x54cccd]
+frame #14: python() [0x54cccd]
+frame #17: python() [0x5a3628]
+frame #20: python() [0x54cccd]
+frame #22: python() [0x54cccd]
+frame #25: python() [0x5a3628]
+frame #28: python() [0x54cccd]
+frame #30: python() [0x54cccd]
+frame #33: python() [0x5a3628]
+frame #37: python() [0x5d347c]
+frame #38: python() [0x581f0d]
+frame #41: python() [0x6bcce2]
+frame #44: <unknown function> + 0x2a1ca (0x7ff2636b31ca in /lib/x86_64-linux-gnu/libc.so.6)
+frame #45: __libc_start_main + 0x8b (0x7ff2636b328b in /lib/x86_64-linux-gnu/libc.so.6)
+Traceback (most recent call last):
+  File "/home/panrc/project/CANConv-1/canconv/scripts/train.py", line 58, in <module>
+    main(args.model_name, cfg, args.save_mat, args.preset, args.override)
+  File "/home/panrc/project/CANConv-1/canconv/scripts/train.py", line 25, in main
+    trainer.train()
+  File "/home/panrc/project/CANConv-1/canconv/util/trainer.py", line 193, in train
+    sr = self.forward(batch)
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/config.py", line 73, in forward
+    return self.model(pan_image, lms_image, cache_indice)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/model.py", line 216, in forward
+    x1, idx1 = self.rb1(x1, cache_indice)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/model.py", line 81, in forward
+    res, idx = self.conv1(x, cache_indice, cluster_override)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/layers/canconv.py", line 616, in forward
+    result = self.convolution_by_cluster(patches, final_indice, kernels, bias_for_conv)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/layers/canconv.py", line 301, in convolution_by_cluster
+    input_permuted = permute(input=patches_re, indice_perm=indice_perm, padded_patch_num=padded_patch_num)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/layers/pwac/custome_op.py", line 91, in permute
+    return c_lib.permute(input, indice_perm, padded_patch_num)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: expected scalar type Float but found Half
+Exception raised from check_type at /pytorch/build/aten/src/ATen/core/TensorMethods.cpp:12 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x98 (0x7ff20c5785e8 in /home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xe0 (0x7ff20c50d4a2 in /home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #2: <unknown function> + 0x31a44a3 (0x7ff1f2a564a3 in /home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: float* at::TensorBase::mutable_data_ptr<float>() const + 0x20 (0x7ff1f2a57330 in /home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: PermuteFunction::forward(torch::autograd::AutogradContext*, at::Tensor, at::Tensor, int) + 0x2cd (0x7ff20cb5e13d in /home/panrc/project/CANConv-1/canconv/layers/pwac/pwacnative.so)
+frame #5: std::enable_if<is_same_v<PermuteFunction, PermuteFunction>, decltype (PermuteFunction::forward(decltype(nullptr), (declval<at::Tensor&>)(), (declval<at::Tensor&>)(), (declval<int&>)()))>::type torch::autograd::Function<PermuteFunction>::apply<PermuteFunction, at::Tensor&, at::Tensor&, int&>(at::Tensor&, at::Tensor&, int&) + 0x7dd (0x7ff20cb5ebcd in /home/panrc/project/CANConv-1/canconv/layers/pwac/pwacnative.so)
+frame #6: permute(at::Tensor, at::Tensor, int) + 0x2a (0x7ff20cb5a09a in /home/panrc/project/CANConv-1/canconv/layers/pwac/pwacnative.so)
+frame #7: <unknown function> + 0x3ad37 (0x7ff20cb0cd37 in /home/panrc/project/CANConv-1/canconv/layers/pwac/pwacnative.so)
+frame #8: <unknown function> + 0x364c1 (0x7ff20cb084c1 in /home/panrc/project/CANConv-1/canconv/layers/pwac/pwacnative.so)
+frame #9: python() [0x58208f]
+<omitting python frames>
+frame #12: python() [0x54cccd]
+frame #14: python() [0x54cccd]
+frame #17: python() [0x5a3628]
+frame #20: python() [0x54cccd]
+frame #22: python() [0x54cccd]
+frame #25: python() [0x5a3628]
+frame #28: python() [0x54cccd]
+frame #30: python() [0x54cccd]
+frame #33: python() [0x5a3628]
+frame #37: python() [0x5d347c]
+frame #38: python() [0x581f0d]
+frame #41: python() [0x6bcce2]
+frame #44: <unknown function> + 0x2a1ca (0x7ff2636b31ca in /lib/x86_64-linux-gnu/libc.so.6)
+frame #45: __libc_start_main + 0x8b (0x7ff2636b328b in /lib/x86_64-linux-gnu/libc.so.6)
+

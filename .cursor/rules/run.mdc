@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+你不要尝试运行任何py文件，这个工程有环境依赖，让我运行，你写代码就好了，我会告诉你结果

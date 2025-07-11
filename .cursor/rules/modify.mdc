@@ -1,0 +1,15 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+改成早停模型，然后验证的时候验证Full Resolution和Evaluating Reduced Resolution的ERGAS，然后我验证时候的参数一般是python3 evaluate_pansharpening.py \
+            --model_path runs/cannet_wv3/weights/final.pth \
+            --cannet_bands 8 \
+            --full_res_h5_dir dataset/full_examples \
+            --full_res_mat_dir "dataset/full_examples(1)" \
+            --reduced_res_h5_dir dataset/reduced_examples \
+            --reduced_res_mat_dir "dataset/reduced_examples(1)" \
+            --sensor_range_max 2047.0 \
+
+            --scale_ratio 4，就是你会知道他数据集路径的，然后这个ergas改善要影响他的早停，要取最好ergas的那组数据

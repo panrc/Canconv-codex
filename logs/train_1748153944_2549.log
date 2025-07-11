@@ -1,0 +1,10 @@
+2025-05-25 14:19:04,038 INFO Train script invoked with args: ['/home/panrc/project/CANConv-1/canconv/scripts/train.py', 'cannet', 'wv3']
+2025-05-25 14:19:04,044 INFO Begin to load kmeans operator...
+2025-05-25 14:19:04,062 INFO Finish loading kmeans operator.
+2025-05-25 14:19:04,064 INFO Loading custom op for conv_by_cluster...
+2025-05-25 14:19:07,566 INFO Seed set to 10
+2025-05-25 14:19:07,566 INFO Using device: cuda:0
+2025-05-25 14:19:09,951 INFO Model loaded.
+2025-05-25 14:19:17,516 INFO Dataset loaded.
+2025-05-25 14:19:17,517 INFO Output dir: runs/cannet_wv3
+2025-05-25 14:19:17,536 INFO Begin Training.

@@ -1,0 +1,54 @@
+2025-06-04 01:02:08,702 INFO Train script invoked with args: ['/home/panrc/project/CANConv-1/canconv/scripts/train.py', 'cannet', 'wv3']
+2025-06-04 01:02:08,713 INFO Begin to load kmeans operator...
+2025-06-04 01:02:08,750 INFO Finish loading kmeans operator.
+2025-06-04 01:02:08,754 INFO Loading custom op for conv_by_cluster...
+2025-06-04 01:02:13,974 INFO Seed set to 10
+2025-06-04 01:02:13,975 INFO Using device: cuda:0
+2025-06-04 01:03:32,838 ERROR CUDA out of memory. Tried to allocate 4.00 GiB. GPU 0 has a total capacity of 8.00 GiB of which 0 bytes is free. Including non-PyTorch memory, this process has 17179869184.00 GiB memory in use. Of the allocated memory 16.31 GiB is allocated by PyTorch, and 563.51 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/home/panrc/project/CANConv-1/canconv/scripts/train.py", line 58, in <module>
+    main(args.model_name, cfg, args.save_mat, args.preset, args.override)
+  File "/home/panrc/project/CANConv-1/canconv/scripts/train.py", line 24, in main
+    trainer = module.Trainer(cfg)
+              ^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/config.py", line 13, in __init__
+    super().__init__(cfg)
+  File "/home/panrc/project/CANConv-1/canconv/util/trainer.py", line 67, in __init__
+    self.forward({
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/config.py", line 75, in forward
+    return self.model(pan_image, lms_image)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/model.py", line 248, in forward
+    x5_transformed = self.transformer5(x5_rb_out)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/model.py", line 34, in forward
+    attn_out, _ = self.attention(x_seq, x_seq, x_seq)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/activation.py", line 1373, in forward
+    attn_output, attn_output_weights = F.multi_head_attention_forward(
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/functional.py", line 6374, in multi_head_attention_forward
+    attn_output_weights = softmax(attn_output_weights, dim=-1)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/functional.py", line 2140, in softmax
+    ret = input.softmax(dim)
+          ^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.00 GiB. GPU 0 has a total capacity of 8.00 GiB of which 0 bytes is free. Including non-PyTorch memory, this process has 17179869184.00 GiB memory in use. Of the allocated memory 16.31 GiB is allocated by PyTorch, and 563.51 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

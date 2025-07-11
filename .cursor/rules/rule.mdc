@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+按照project.mdc里面内容进行模型改进，只改输入输出之间的东西，然后改了后要能正常训练，然后你要改的是cannet模型，他在canconv/models/cannet里面

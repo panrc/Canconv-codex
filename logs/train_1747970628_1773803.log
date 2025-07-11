@@ -1,0 +1,69 @@
+2025-05-23 11:23:48,148 INFO Train script invoked with args: ['/home/panrc/project/CANConv-1/canconv/scripts/train.py', 'cannet', 'wv3']
+2025-05-23 11:23:48,158 INFO Begin to load kmeans operator...
+2025-05-23 11:23:48,179 INFO Finish loading kmeans operator.
+2025-05-23 11:23:48,183 INFO Loading custom op for conv_by_cluster...
+2025-05-23 11:23:50,523 INFO Seed set to 10
+2025-05-23 11:23:50,523 INFO Using device: cuda:0
+2025-05-23 11:23:57,302 ERROR mat1 and mat2 shapes cannot be multiplied (1024x288 and 2592x16)
+Traceback (most recent call last):
+  File "/home/panrc/project/CANConv-1/canconv/scripts/train.py", line 58, in <module>
+    main(args.model_name, cfg, args.save_mat, args.preset, args.override)
+  File "/home/panrc/project/CANConv-1/canconv/scripts/train.py", line 24, in main
+    trainer = module.Trainer(cfg)
+              ^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/config.py", line 12, in __init__
+    super().__init__(cfg)
+  File "/home/panrc/project/CANConv-1/canconv/util/trainer.py", line 64, in __init__
+    self.forward({
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/config.py", line 40, in forward
+    return self.model(data['pan'].to(self.dev), data['lms'].to(self.dev))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/model.py", line 172, in forward
+    x1, idx1 = self.rb1(x1, cache_indice)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/model.py", line 41, in forward
+    res, idx = self.conv1(x, cache_indice, cluster_override)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/layers/canconv.py", line 605, in forward
+    bias_for_conv = self.generate_bias(final_centroids, x)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/layers/canconv.py", line 234, in generate_bias
+    return self.centroid_to_bias(centroids)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1024x288 and 2592x16)

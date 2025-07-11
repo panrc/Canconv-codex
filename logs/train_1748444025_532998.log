@@ -1,0 +1,30 @@
+2025-05-28 22:53:45,863 INFO Train script invoked with args: ['/home/panrc/project/CANConv-1/canconv/scripts/train.py', 'cannet', 'wv3']
+2025-05-28 22:53:45,866 INFO Begin to load kmeans operator...
+2025-05-28 22:53:45,881 INFO Finish loading kmeans operator.
+2025-05-28 22:53:45,883 INFO Loading custom op for conv_by_cluster...
+2025-05-28 22:53:51,085 INFO Seed set to 10
+2025-05-28 22:53:51,085 INFO Using device: cuda:0
+2025-05-28 22:53:52,993 INFO Model loaded.
+2025-05-28 22:54:48,021 INFO Dataset loaded.
+2025-05-28 22:54:48,028 INFO Output dir: runs/cannet_wv3
+2025-05-28 22:54:48,063 INFO Begin Training.
+2025-05-28 23:00:19,846 INFO Epoch 1 checkpoint saved
+2025-05-28 23:05:54,628 INFO Epoch 2 checkpoint saved
+2025-05-28 23:11:29,689 INFO Epoch 3 checkpoint saved
+2025-05-28 23:17:06,920 INFO Epoch 4 checkpoint saved
+2025-05-28 23:23:35,067 INFO Epoch 5: Running evaluation for early stopping...
+2025-05-28 23:23:35,067 WARNING Reduced resolution H5 directory not found or not configured: None
+2025-05-28 23:23:35,067 WARNING Full resolution H5 directory not found or not configured: None
+2025-05-28 23:23:35,067 WARNING Epoch 5: Monitored metric 'Reduced Res H5 ERGAS' not found in evaluation results. Skipping early stopping check.
+2025-05-28 23:23:35,094 INFO Epoch 5 checkpoint saved
+2025-05-28 23:29:19,093 INFO Epoch 6 checkpoint saved
+2025-05-28 23:35:02,903 INFO Epoch 7 checkpoint saved
+2025-05-28 23:40:49,562 INFO Epoch 8 checkpoint saved
+2025-05-28 23:46:34,897 INFO Epoch 9 checkpoint saved
+2025-05-28 23:53:04,483 INFO Epoch 10: Running evaluation for early stopping...
+2025-05-28 23:53:04,484 WARNING Reduced resolution H5 directory not found or not configured: None
+2025-05-28 23:53:04,484 WARNING Full resolution H5 directory not found or not configured: None
+2025-05-28 23:53:04,484 WARNING Epoch 10: Monitored metric 'Reduced Res H5 ERGAS' not found in evaluation results. Skipping early stopping check.
+2025-05-28 23:53:04,518 INFO Epoch 10 checkpoint saved
+2025-05-28 23:58:51,320 INFO Epoch 11 checkpoint saved
+2025-05-29 00:04:38,673 INFO Epoch 12 checkpoint saved

@@ -1,0 +1,32 @@
+2025-05-23 17:07:41,334 INFO Train script invoked with args: ['/home/panrc/project/CANConv-1/canconv/scripts/train.py', 'cannet', 'wv3']
+2025-05-23 17:07:41,344 INFO Begin to load kmeans operator...
+2025-05-23 17:07:41,361 INFO Finish loading kmeans operator.
+2025-05-23 17:07:41,363 INFO Loading custom op for conv_by_cluster...
+2025-05-23 17:07:43,157 INFO Seed set to 10
+2025-05-23 17:07:43,158 INFO Using device: cuda:0
+2025-05-23 17:07:43,167 ERROR HIERARCHICAL_CLUSTERING
+Traceback (most recent call last):
+  File "/home/panrc/project/CANConv-1/canconv/scripts/train.py", line 58, in <module>
+    main(args.model_name, cfg, args.save_mat, args.preset, args.override)
+  File "/home/panrc/project/CANConv-1/canconv/scripts/train.py", line 24, in main
+    trainer = module.Trainer(cfg)
+              ^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/config.py", line 12, in __init__
+    super().__init__(cfg)
+  File "/home/panrc/project/CANConv-1/canconv/util/trainer.py", line 63, in __init__
+    self._create_model(cfg)
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/config.py", line 15, in _create_model
+    self.model = CANNet(cfg).to(self.dev)
+                 ^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/model.py", line 137, in __init__
+    self.rb1 = CANResBlock(self.channels, cluster_num_base=self.cluster_num_base, kernel_size=self.default_kernel_size, stride_feat=shallow_stride_feat,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/model.py", line 42, in __init__
+    self.conv1 = CANConv(in_channels=channels, out_channels=channels,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/layers/canconv.py", line 70, in __init__
+    self.hc_distance_threshold = hc_distance_threshold if hc_distance_threshold is not None else _global_cfg.MODEL.CANCONV.HIERARCHICAL_CLUSTERING.DISTANCE_THRESHOLD
+                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/yacs/config.py", line 141, in __getattr__
+    raise AttributeError(name)
+AttributeError: HIERARCHICAL_CLUSTERING

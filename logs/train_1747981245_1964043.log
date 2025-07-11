@@ -1,0 +1,54 @@
+2025-05-23 14:20:45,075 INFO Train script invoked with args: ['/home/panrc/project/CANConv-1/canconv/scripts/train.py', 'cannet', 'wv3']
+2025-05-23 14:20:45,088 INFO Begin to load kmeans operator...
+2025-05-23 14:20:45,106 INFO Finish loading kmeans operator.
+2025-05-23 14:20:45,110 INFO Loading custom op for conv_by_cluster...
+2025-05-23 14:20:47,563 INFO Seed set to 10
+2025-05-23 14:20:47,563 INFO Using device: cuda:0
+2025-05-23 14:21:07,455 ERROR CUDA out of memory. Tried to allocate 1.96 GiB. GPU 
+Traceback (most recent call last):
+  File "/home/panrc/project/CANConv-1/canconv/scripts/train.py", line 58, in <module>
+    main(args.model_name, cfg, args.save_mat, args.preset, args.override)
+  File "/home/panrc/project/CANConv-1/canconv/scripts/train.py", line 24, in main
+    trainer = module.Trainer(cfg)
+              ^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/config.py", line 12, in __init__
+    super().__init__(cfg)
+  File "/home/panrc/project/CANConv-1/canconv/util/trainer.py", line 64, in __init__
+    self.forward({
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/config.py", line 40, in forward
+    return self.model(data['pan'].to(self.dev), data['lms'].to(self.dev))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/model.py", line 176, in forward
+    x3, _ = self.rb3(x3, cache_indice)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/model.py", line 43, in forward
+    res, _ = self.conv2(res, cache_indice, idx)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/layers/canconv.py", line 607, in forward
+    kernels = self.generate_kernel(final_centroids)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/layers/canconv.py", line 212, in generate_kernel
+    kernel_by_cluster_expanded = torch.einsum('bkc,bka,bko,cao->bkcao',
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/functional.py", line 385, in einsum
+    return _VF.einsum(equation, operands)  # type: ignore[attr-defined]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.96 GiB. GPU 

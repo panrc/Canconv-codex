@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+在每个resblock的后面加轻量级transformer捕捉全局信息，希望改完后ergas指标能提高，模型不要太复杂，要考虑效益

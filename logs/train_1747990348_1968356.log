@@ -1,0 +1,70 @@
+2025-05-23 16:52:28,536 INFO Train script invoked with args: ['/home/panrc/project/CANConv-1/canconv/scripts/train.py', 'cannet', 'wv3']
+2025-05-23 16:52:28,539 INFO Begin to load kmeans operator...
+2025-05-23 16:52:28,557 INFO Finish loading kmeans operator.
+2025-05-23 16:52:28,561 INFO Loading custom op for conv_by_cluster...
+2025-05-23 16:52:30,334 INFO Seed set to 10
+2025-05-23 16:52:30,335 INFO Using device: cuda:0
+2025-05-23 16:52:31,242 ERROR  Error while processing rearrange-reduction pattern "b (c_in area) (h w) -> b (h w) (c_in area)".
+ Input tensor shape: torch.Size([4, 576, 256]). Additional info: {'c_in': 64, 'area': 9, 'h': 64, 'w': 64}.
+ Shape mismatch, 256 != 4096
+Traceback (most recent call last):
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/einops/einops.py", line 532, in reduce
+    return _apply_recipe(
+           ^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/einops/einops.py", line 235, in _apply_recipe
+    init_shapes, axes_reordering, reduced_axes, added_axes, final_shapes, n_axes_w_added = _reconstruct_from_shape(
+                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/einops/einops.py", line 184, in _reconstruct_from_shape_uncached
+    raise EinopsError(f"Shape mismatch, {length} != {known_product}")
+einops.EinopsError: Shape mismatch, 256 != 4096
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/panrc/project/CANConv-1/canconv/scripts/train.py", line 58, in <module>
+    main(args.model_name, cfg, args.save_mat, args.preset, args.override)
+  File "/home/panrc/project/CANConv-1/canconv/scripts/train.py", line 24, in main
+    trainer = module.Trainer(cfg)
+              ^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/config.py", line 12, in __init__
+    super().__init__(cfg)
+  File "/home/panrc/project/CANConv-1/canconv/util/trainer.py", line 64, in __init__
+    self.forward({
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/config.py", line 37, in forward
+    return self.model(ms_input, pan_input)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/model.py", line 170, in forward
+    x = self.rb1(x)
+        ^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/model.py", line 63, in forward
+    out = self.relu1(self.conv1(x))
+                     ^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/layers/canconv.py", line 392, in forward
+    patches = rearrange(
+              ^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/einops/einops.py", line 600, in rearrange
+    return reduce(tensor, pattern, reduction="rearrange", **axes_lengths)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/.venv/lib/python3.12/site-packages/einops/einops.py", line 542, in reduce
+    raise EinopsError(message + "\n {}".format(e))
+einops.EinopsError:  Error while processing rearrange-reduction pattern "b (c_in area) (h w) -> b (h w) (c_in area)".
+ Input tensor shape: torch.Size([4, 576, 256]). Additional info: {'c_in': 64, 'area': 9, 'h': 64, 'w': 64}.
+ Shape mismatch, 256 != 4096

@@ -1,0 +1,21 @@
+2025-05-23 16:48:43,650 INFO Train script invoked with args: ['/home/panrc/project/CANConv-1/canconv/scripts/train.py', 'cannet', 'wv3']
+2025-05-23 16:48:43,662 INFO Begin to load kmeans operator...
+2025-05-23 16:48:43,679 INFO Finish loading kmeans operator.
+2025-05-23 16:48:43,681 INFO Loading custom op for conv_by_cluster...
+2025-05-23 16:48:45,754 INFO Seed set to 10
+2025-05-23 16:48:45,754 INFO Using device: cuda:0
+2025-05-23 16:48:45,755 ERROR CANNet.__init__() takes 2 positional arguments but 5 were given
+Traceback (most recent call last):
+  File "/home/panrc/project/CANConv-1/canconv/scripts/train.py", line 58, in <module>
+    main(args.model_name, cfg, args.save_mat, args.preset, args.override)
+  File "/home/panrc/project/CANConv-1/canconv/scripts/train.py", line 24, in main
+    trainer = module.Trainer(cfg)
+              ^^^^^^^^^^^^^^^^^^^
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/config.py", line 12, in __init__
+    super().__init__(cfg)
+  File "/home/panrc/project/CANConv-1/canconv/util/trainer.py", line 63, in __init__
+    self._create_model(cfg)
+  File "/home/panrc/project/CANConv-1/canconv/models/cannet/config.py", line 21, in _create_model
+    self.model = CANNet(cfg['spectral_num'], cfg['channels'],
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: CANNet.__init__() takes 2 positional arguments but 5 were given

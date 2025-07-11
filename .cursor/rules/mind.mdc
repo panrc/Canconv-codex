@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+就要加入层次聚类，要体现动态簇数调整
+
+然后要注意显存用完后要及时释放，不要显存泄露

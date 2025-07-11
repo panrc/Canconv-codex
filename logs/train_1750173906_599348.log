@@ -1,0 +1,54 @@
+2025-06-17 23:25:06,180 INFO Train script invoked with args: ['/home/panrc/project/CANConv-1/canconv/scripts/train.py', 'lagnet', 'wv3']
+2025-06-17 23:25:07,227 INFO Seed set to 10
+2025-06-17 23:25:07,227 INFO Using device: cuda:0
+2025-06-17 23:25:08,106 INFO Model loaded.
+2025-06-17 23:25:27,635 INFO Dataset loaded.
+2025-06-17 23:25:27,669 INFO Output dir: runs/lagnet_wv3
+2025-06-17 23:25:27,792 INFO Begin Training.
+2025-06-17 23:41:41,983 INFO Validation loss improved from inf to 0.000485. Saving model.
+2025-06-17 23:41:42,033 INFO Epoch 10: Running ERGAS evaluation for logging...
+2025-06-17 23:41:42,034 WARNING Reduced resolution H5 directory not found or not configured: None
+2025-06-17 23:41:42,034 WARNING Full resolution H5 directory not found or not configured: None
+2025-06-17 23:57:55,166 INFO Validation loss 0.000428 did not improve from 0.000485 by at least 0.001. Counter: 1/10
+2025-06-17 23:57:55,167 INFO Epoch 20: Running ERGAS evaluation for logging...
+2025-06-17 23:57:55,167 WARNING Reduced resolution H5 directory not found or not configured: None
+2025-06-17 23:57:55,167 WARNING Full resolution H5 directory not found or not configured: None
+2025-06-18 00:05:51,615 INFO Epoch 25 checkpoint saved
+2025-06-18 00:14:02,183 INFO Validation loss 0.000402 did not improve from 0.000485 by at least 0.001. Counter: 2/10
+2025-06-18 00:14:02,184 INFO Epoch 30: Running ERGAS evaluation for logging...
+2025-06-18 00:14:02,184 WARNING Reduced resolution H5 directory not found or not configured: None
+2025-06-18 00:14:02,184 WARNING Full resolution H5 directory not found or not configured: None
+2025-06-18 00:30:18,197 INFO Validation loss 0.000367 did not improve from 0.000485 by at least 0.001. Counter: 3/10
+2025-06-18 00:30:18,197 INFO Epoch 40: Running ERGAS evaluation for logging...
+2025-06-18 00:30:18,197 WARNING Reduced resolution H5 directory not found or not configured: None
+2025-06-18 00:30:18,197 WARNING Full resolution H5 directory not found or not configured: None
+2025-06-18 00:46:36,090 INFO Validation loss 0.000345 did not improve from 0.000485 by at least 0.001. Counter: 4/10
+2025-06-18 00:46:36,090 INFO Epoch 50: Running ERGAS evaluation for logging...
+2025-06-18 00:46:36,090 WARNING Reduced resolution H5 directory not found or not configured: None
+2025-06-18 00:46:36,090 WARNING Full resolution H5 directory not found or not configured: None
+2025-06-18 00:46:36,103 INFO Epoch 50 checkpoint saved
+2025-06-18 01:02:52,968 INFO Validation loss 0.000337 did not improve from 0.000485 by at least 0.001. Counter: 5/10
+2025-06-18 01:02:52,969 INFO Epoch 60: Running ERGAS evaluation for logging...
+2025-06-18 01:02:52,969 WARNING Reduced resolution H5 directory not found or not configured: None
+2025-06-18 01:02:52,969 WARNING Full resolution H5 directory not found or not configured: None
+2025-06-18 01:19:09,823 INFO Validation loss 0.000331 did not improve from 0.000485 by at least 0.001. Counter: 6/10
+2025-06-18 01:19:09,824 INFO Epoch 70: Running ERGAS evaluation for logging...
+2025-06-18 01:19:09,824 WARNING Reduced resolution H5 directory not found or not configured: None
+2025-06-18 01:19:09,824 WARNING Full resolution H5 directory not found or not configured: None
+2025-06-18 01:27:16,646 INFO Epoch 75 checkpoint saved
+2025-06-18 01:35:26,517 INFO Validation loss 0.000326 did not improve from 0.000485 by at least 0.001. Counter: 7/10
+2025-06-18 01:35:26,517 INFO Epoch 80: Running ERGAS evaluation for logging...
+2025-06-18 01:35:26,517 WARNING Reduced resolution H5 directory not found or not configured: None
+2025-06-18 01:35:26,518 WARNING Full resolution H5 directory not found or not configured: None
+2025-06-18 01:51:41,243 INFO Validation loss 0.000643 did not improve from 0.000485 by at least 0.001. Counter: 8/10
+2025-06-18 01:51:41,243 INFO Epoch 90: Running ERGAS evaluation for logging...
+2025-06-18 01:51:41,243 WARNING Reduced resolution H5 directory not found or not configured: None
+2025-06-18 01:51:41,244 WARNING Full resolution H5 directory not found or not configured: None
+2025-06-18 02:07:56,632 INFO Validation loss 0.000323 did not improve from 0.000485 by at least 0.001. Counter: 9/10
+2025-06-18 02:07:56,634 INFO Epoch 100: Running ERGAS evaluation for logging...
+2025-06-18 02:07:56,634 WARNING Reduced resolution H5 directory not found or not configured: None
+2025-06-18 02:07:56,634 WARNING Full resolution H5 directory not found or not configured: None
+2025-06-18 02:07:56,645 INFO Epoch 100 checkpoint saved
+2025-06-18 02:24:12,916 INFO Validation loss 0.000325 did not improve from 0.000485 by at least 0.001. Counter: 10/10
+2025-06-18 02:24:12,917 INFO Early stopping triggered after 10 epochs without improvement in validation loss.
+2025-06-18 02:24:12,936 INFO Training finished.

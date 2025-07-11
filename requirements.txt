@@ -1,0 +1,19 @@
+einops # Let pip choose a compatible version from its default index
+fvcore==0.1.5.post20221221
+h5py==3.12.1
+matplotlib==3.9.3
+numpy==2.2.0
+pandas==2.2.3
+scikit_learn==1.6.0
+scipy==1.14.1
+thop==0.1.1.post2209072238
+# For PyTorch, ensure your pip command or global pip config points to the correct index or use a specific install command
+# Or add the torch line with its specific index if needed, e.g.:
+# torch==2.3.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+# For now, assuming torch will be installed separately or a compatible version found by pip.
+# Let's try with a version that pip might find more easily without a specific CUDA build string initially,
+# or one that you confirm is in your configured pip index.
+# Reverting to a common way to specify torch, pip will try to find a compatible version.
+# If GPU is needed, this might download CPU-only. Best to install torch separately.  # Attempting a version that is likely in standard pypi, might be CPU. CUDA version needs specific index.
+tqdm==4.66.5
+tensorboard

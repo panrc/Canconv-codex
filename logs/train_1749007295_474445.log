@@ -1,0 +1,32 @@
+2025-06-04 11:21:35,457 INFO Train script invoked with args: ['/home/panrc/project/CANConv-1/canconv/scripts/train.py', 'cannet', 'wv3']
+2025-06-04 11:21:35,460 INFO Begin to load kmeans operator...
+2025-06-04 11:21:35,477 INFO Finish loading kmeans operator.
+2025-06-04 11:21:35,478 INFO Loading custom op for conv_by_cluster...
+2025-06-04 11:21:39,521 INFO Seed set to 10
+2025-06-04 11:21:39,521 INFO Using device: cuda:0
+2025-06-04 11:21:44,227 INFO Model loaded.
+2025-06-04 11:22:25,396 INFO Dataset loaded.
+2025-06-04 11:22:25,430 INFO Output dir: runs/cannet_wv3_wv3
+2025-06-04 11:22:25,562 INFO Begin Training.
+2025-06-04 11:38:22,592 INFO Validation loss improved from inf to 0.019845. Saving model.
+2025-06-04 11:38:22,703 INFO Epoch 1: Running ERGAS evaluation for logging...
+2025-06-04 11:38:22,703 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-06-04 11:38:46,934 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.15513962883422816), 'ERGAS': np.float64(74.98451819313195), 'Q_avg': np.float64(0.9855177987062422), 'D_lambda': np.float64(0.003447547307427292), 'D_s': np.float64(0.022261436616676622), 'HQNR': np.float64(0.9743655832580425)}
+2025-06-04 11:38:46,934 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-06-04 11:39:45,519 INFO Full Res H5 Metrics: {'SAM': np.float64(0.14601556976103663), 'ERGAS': np.float64(16.296092473145983), 'Q_avg': np.float64(0.987224989055686), 'D_lambda': np.float64(0.0032447904391341474), 'D_s': np.float64(0.014184139990311134), 'HQNR': np.float64(0.9826181501159162)}
+2025-06-04 11:39:45,520 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-06-04 11:40:11,759 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.15570017415160373), 'ERGAS': np.float64(75.30140711301439), 'Q_avg': np.float64(0.9855025477416769), 'D_lambda': np.float64(0.0034600038700356383), 'D_s': np.float64(0.0222300409706609), 'HQNR': np.float64(0.9743848365990125)}
+2025-06-04 11:40:11,761 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-06-04 11:41:13,456 INFO Full Res MAT Metrics: {'SAM': np.float64(0.14601557090804346), 'ERGAS': np.float64(16.29609266681596), 'Q_avg': np.float64(0.9872249890830688), 'D_lambda': np.float64(0.003244790464623187), 'D_s': np.float64(0.014184139105926353), 'HQNR': np.float64(0.9826181509725919)}
+2025-06-04 11:41:13,489 INFO Epoch 1 checkpoint saved
+2025-06-04 11:57:20,544 INFO Validation loss improved from 0.019845 to 0.017616. Saving model.
+2025-06-04 11:57:20,564 INFO Epoch 2: Running ERGAS evaluation for logging...
+2025-06-04 11:57:20,564 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-06-04 11:57:42,055 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.17579833143839205), 'ERGAS': np.float64(86.1098624993627), 'Q_avg': np.float64(0.9822285244469631), 'D_lambda': np.float64(0.003906629587519824), 'D_s': np.float64(0.02253413993051826), 'HQNR': np.float64(0.9736457879958721)}
+2025-06-04 11:57:42,056 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-06-04 11:58:38,605 INFO Full Res H5 Metrics: {'SAM': np.float64(0.16057278677483683), 'ERGAS': np.float64(18.113987173976007), 'Q_avg': np.float64(0.9857363240518888), 'D_lambda': np.float64(0.003568284150551929), 'D_s': np.float64(0.01382309606874546), 'HQNR': np.float64(0.9826587297982204)}
+2025-06-04 11:58:38,605 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-06-04 11:59:02,246 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.17434973349991612), 'ERGAS': np.float64(85.2742611876501), 'Q_avg': np.float64(0.9825854871968366), 'D_lambda': np.float64(0.003874438522220357), 'D_s': np.float64(0.02201365523488963), 'HQNR': np.float64(0.9741954332824848)}
+2025-06-04 11:59:02,247 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-06-04 11:59:59,118 INFO Full Res MAT Metrics: {'SAM': np.float64(0.16057278691619106), 'ERGAS': np.float64(18.11398722264972), 'Q_avg': np.float64(0.9857363242120349), 'D_lambda': np.float64(0.0035682841536931347), 'D_s': np.float64(0.013823095635510268), 'HQNR': np.float64(0.98265873022715)}
+2025-06-04 11:59:59,146 INFO Epoch 2 checkpoint saved

@@ -1,0 +1,13 @@
+{
+  "cannet": {
+    "gf2": {
+      "error": "CANNet.__init__() got an unexpected keyword argument 'channel'"
+    },
+    "qb": {
+      "error": "CANNet.__init__() got an unexpected keyword argument 'channel'"
+    },
+    "wv3": {
+      "error": "CANNet.__init__() got an unexpected keyword argument 'channel'"
+    }
+  }
+}

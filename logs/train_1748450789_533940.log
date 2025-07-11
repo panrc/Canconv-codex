@@ -1,0 +1,523 @@
+2025-05-29 00:46:29,940 INFO Train script invoked with args: ['/home/panrc/project/CANConv-1/canconv/scripts/train.py', 'cannet', 'wv3']
+2025-05-29 00:46:29,945 INFO Begin to load kmeans operator...
+2025-05-29 00:46:29,952 INFO Finish loading kmeans operator.
+2025-05-29 00:46:29,957 INFO Loading custom op for conv_by_cluster...
+2025-05-29 00:46:34,761 INFO Seed set to 10
+2025-05-29 00:46:34,761 INFO Using device: cuda:0
+2025-05-29 00:46:36,870 INFO Model loaded.
+2025-05-29 00:46:46,939 INFO Dataset loaded.
+2025-05-29 00:46:46,962 INFO Output dir: runs/cannet_wv3_wv3
+2025-05-29 00:46:47,064 INFO Begin Training.
+2025-05-29 00:52:46,077 INFO Epoch 1: Running evaluation for early stopping...
+2025-05-29 00:52:46,078 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 00:52:53,781 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.16885264303936737), 'ERGAS': np.float64(81.99770338163538), 'Q_avg': np.float64(0.9831723961098993), 'D_lambda': np.float64(0.0037522809564303856), 'D_s': np.float64(0.023146095013992934), 'HQNR': np.float64(0.9731857548753633)}
+2025-05-29 00:52:53,781 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 00:54:14,632 INFO Full Res H5 Metrics: {'SAM': np.float64(0.16368355375322935), 'ERGAS': np.float64(18.31971311517891), 'Q_avg': np.float64(0.9846888490353164), 'D_lambda': np.float64(0.0036374123056273195), 'D_s': np.float64(0.015070918879972472), 'HQNR': np.float64(0.981347205196019)}
+2025-05-29 00:54:14,632 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 00:54:22,604 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.1695525077528858), 'ERGAS': np.float64(82.41893815896665), 'Q_avg': np.float64(0.9829914908110915), 'D_lambda': np.float64(0.0037678335056196845), 'D_s': np.float64(0.02301038696712541), 'HQNR': np.float64(0.9733057474510283)}
+2025-05-29 00:54:22,605 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 00:55:45,396 INFO Full Res MAT Metrics: {'SAM': np.float64(0.16368351157497343), 'ERGAS': np.float64(18.319707954249328), 'Q_avg': np.float64(0.9846888612617439), 'D_lambda': np.float64(0.0036374113683327438), 'D_s': np.float64(0.015070919466543098), 'HQNR': np.float64(0.9813472055334393)}
+2025-05-29 00:55:45,397 INFO Epoch 1: Reduced Res H5 ERGAS improved from inf to 81.9977
+2025-05-29 00:55:45,397 INFO Epoch 1: Full Res H5 ERGAS improved from inf to 18.3197
+2025-05-29 00:55:45,397 INFO Epoch 1: Reduced Res MAT ERGAS improved from inf to 82.4189
+2025-05-29 00:55:45,397 INFO Epoch 1: Full Res MAT ERGAS improved from inf to 18.3197
+2025-05-29 00:55:45,397 INFO Epoch 1: Primary metric (Reduced Res H5 ERGAS) improved from inf to 81.9977. Saving best model.
+2025-05-29 00:55:45,470 INFO Epoch 1: New best model saved to runs/cannet_wv3_wv3/weights/best_model.pth based on Reduced Res H5 ERGAS: 81.9977
+2025-05-29 00:55:45,470 INFO Epoch 1: Progress made in at least one ERGAS metric. Early stopping counter reset.
+2025-05-29 00:55:45,490 INFO Epoch 1 checkpoint saved
+2025-05-29 01:01:54,833 INFO Epoch 2: Running evaluation for early stopping...
+2025-05-29 01:01:54,834 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 01:02:02,457 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.1954211617589002), 'ERGAS': np.float64(98.16553356472602), 'Q_avg': np.float64(0.9762632696930247), 'D_lambda': np.float64(0.004342692483531115), 'D_s': np.float64(0.019296912563807483), 'HQNR': np.float64(0.9764438689288207)}
+2025-05-29 01:02:02,457 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 01:03:24,508 INFO Full Res H5 Metrics: {'SAM': np.float64(0.16784819985949262), 'ERGAS': np.float64(19.394822711971692), 'Q_avg': np.float64(0.9847248239084501), 'D_lambda': np.float64(0.003729959996877613), 'D_s': np.float64(0.013453305179051083), 'HQNR': np.float64(0.9828677152150498)}
+2025-05-29 01:03:24,512 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 01:03:32,701 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.1939256244207795), 'ERGAS': np.float64(97.26374934362407), 'Q_avg': np.float64(0.9765651282453935), 'D_lambda': np.float64(0.004309458320461767), 'D_s': np.float64(0.01852190393804822), 'HQNR': np.float64(0.977247761513163)}
+2025-05-29 01:03:32,702 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 01:04:55,860 INFO Full Res MAT Metrics: {'SAM': np.float64(0.16784818930753725), 'ERGAS': np.float64(19.394821489316108), 'Q_avg': np.float64(0.9847248251463533), 'D_lambda': np.float64(0.0037299597623897175), 'D_s': np.float64(0.013453304818431783), 'HQNR': np.float64(0.9828677158073317)}
+2025-05-29 01:04:55,861 INFO Epoch 2: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 98.1655).
+2025-05-29 01:04:55,861 INFO Epoch 2: No improvement in key ERGAS metrics. Early stopping counter: 1/20
+2025-05-29 01:04:55,910 INFO Epoch 2 checkpoint saved
+2025-05-29 01:11:04,178 INFO Epoch 3: Running evaluation for early stopping...
+2025-05-29 01:11:04,178 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 01:11:11,324 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.2014872858694512), 'ERGAS': np.float64(99.83833230675177), 'Q_avg': np.float64(0.978599787512274), 'D_lambda': np.float64(0.004477495241543361), 'D_s': np.float64(0.021911018068792837), 'HQNR': np.float64(0.9737098039127983)}
+2025-05-29 01:11:11,325 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 01:12:32,090 INFO Full Res H5 Metrics: {'SAM': np.float64(0.16676470322073803), 'ERGAS': np.float64(19.090064845071897), 'Q_avg': np.float64(0.984927345480798), 'D_lambda': np.float64(0.003705882293794178), 'D_s': np.float64(0.015712938698777223), 'HQNR': np.float64(0.980640354049932)}
+2025-05-29 01:12:32,091 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 01:12:41,320 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.19965181442804006), 'ERGAS': np.float64(98.80915787526394), 'Q_avg': np.float64(0.9789788770964203), 'D_lambda': np.float64(0.004436706987289778), 'D_s': np.float64(0.020924421386274122), 'HQNR': np.float64(0.9747313552543965)}
+2025-05-29 01:12:41,320 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 01:14:03,699 INFO Full Res MAT Metrics: {'SAM': np.float64(0.16676470249618552), 'ERGAS': np.float64(19.09006487577856), 'Q_avg': np.float64(0.9849273454422238), 'D_lambda': np.float64(0.0037058822776930107), 'D_s': np.float64(0.01571293896176324), 'HQNR': np.float64(0.9806403538033365)}
+2025-05-29 01:14:03,708 INFO Epoch 3: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 99.8383).
+2025-05-29 01:14:03,708 INFO Epoch 3: No improvement in key ERGAS metrics. Early stopping counter: 2/20
+2025-05-29 01:14:03,745 INFO Epoch 3 checkpoint saved
+2025-05-29 01:20:11,209 INFO Epoch 4: Running evaluation for early stopping...
+2025-05-29 01:20:11,209 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 01:20:19,529 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20268832830348343), 'ERGAS': np.float64(99.09708982709071), 'Q_avg': np.float64(0.978396866760184), 'D_lambda': np.float64(0.0045041850734107445), 'D_s': np.float64(0.024395028543901454), 'HQNR': np.float64(0.9712106570972509)}
+2025-05-29 01:20:19,529 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 01:21:40,138 INFO Full Res H5 Metrics: {'SAM': np.float64(0.1675684405635836), 'ERGAS': np.float64(18.985555734321384), 'Q_avg': np.float64(0.9844346343964501), 'D_lambda': np.float64(0.0037237431236351913), 'D_s': np.float64(0.01701654738985206), 'HQNR': np.float64(0.9793239948721055)}
+2025-05-29 01:21:40,139 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 01:21:48,169 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20328194989697765), 'ERGAS': np.float64(99.40548856834769), 'Q_avg': np.float64(0.9783106500713513), 'D_lambda': np.float64(0.0045173766643772815), 'D_s': np.float64(0.024148585130660937), 'HQNR': np.float64(0.971442852218655)}
+2025-05-29 01:21:48,169 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 01:23:10,681 INFO Full Res MAT Metrics: {'SAM': np.float64(0.16756844202891644), 'ERGAS': np.float64(18.985555874451588), 'Q_avg': np.float64(0.9844346338451266), 'D_lambda': np.float64(0.003723743156198142), 'D_s': np.float64(0.017016547746443678), 'HQNR': np.float64(0.9793239944834792)}
+2025-05-29 01:23:10,682 INFO Epoch 4: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 99.0971).
+2025-05-29 01:23:10,682 INFO Epoch 4: No improvement in key ERGAS metrics. Early stopping counter: 3/20
+2025-05-29 01:23:10,728 INFO Epoch 4 checkpoint saved
+2025-05-29 01:29:20,380 INFO Epoch 5: Running evaluation for early stopping...
+2025-05-29 01:29:20,381 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 01:29:27,676 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20317426506912417), 'ERGAS': np.float64(100.1128648570639), 'Q_avg': np.float64(0.9779624387978212), 'D_lambda': np.float64(0.00451498366820276), 'D_s': np.float64(0.02279066576599703), 'HQNR': np.float64(0.9727970187444681)}
+2025-05-29 01:29:27,676 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 01:30:49,018 INFO Full Res H5 Metrics: {'SAM': np.float64(0.16927134799084934), 'ERGAS': np.float64(19.16574431448052), 'Q_avg': np.float64(0.9842061384619074), 'D_lambda': np.float64(0.003761585510907763), 'D_s': np.float64(0.01686594305362781), 'HQNR': np.float64(0.979436977001836)}
+2025-05-29 01:30:49,019 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 01:30:56,847 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20442135307827597), 'ERGAS': np.float64(100.4910680264001), 'Q_avg': np.float64(0.9777367508940422), 'D_lambda': np.float64(0.0045426967350727975), 'D_s': np.float64(0.022617803275232155), 'HQNR': np.float64(0.9729421264383513)}
+2025-05-29 01:30:56,847 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 01:32:19,626 INFO Full Res MAT Metrics: {'SAM': np.float64(0.16927138626007768), 'ERGAS': np.float64(19.16574778597985), 'Q_avg': np.float64(0.9842061293034868), 'D_lambda': np.float64(0.00376158636133506), 'D_s': np.float64(0.01686594458911104), 'HQNR': np.float64(0.9794369746322624)}
+2025-05-29 01:32:19,626 INFO Epoch 5: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 100.1129).
+2025-05-29 01:32:19,626 INFO Epoch 5: No improvement in key ERGAS metrics. Early stopping counter: 4/20
+2025-05-29 01:32:19,665 INFO Epoch 5 checkpoint saved
+2025-05-29 01:38:26,977 INFO Epoch 6: Running evaluation for early stopping...
+2025-05-29 01:38:26,977 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 01:38:34,665 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.2047899256470505), 'ERGAS': np.float64(101.31978357147202), 'Q_avg': np.float64(0.9778860681407903), 'D_lambda': np.float64(0.0045508872366011215), 'D_s': np.float64(0.022552408513993684), 'HQNR': np.float64(0.9729990480885269)}
+2025-05-29 01:38:34,666 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 01:39:57,045 INFO Full Res H5 Metrics: {'SAM': np.float64(0.16989923219577147), 'ERGAS': np.float64(19.343255139153698), 'Q_avg': np.float64(0.9841322905001725), 'D_lambda': np.float64(0.003775538493239367), 'D_s': np.float64(0.0171424709019548), 'HQNR': np.float64(0.9791480806233519)}
+2025-05-29 01:39:57,053 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 01:40:05,570 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20486053652142955), 'ERGAS': np.float64(101.27851705941598), 'Q_avg': np.float64(0.9779111357411079), 'D_lambda': np.float64(0.004552456367142879), 'D_s': np.float64(0.021697869951391537), 'HQNR': np.float64(0.9738482479308598)}
+2025-05-29 01:40:05,571 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 01:41:29,176 INFO Full Res MAT Metrics: {'SAM': np.float64(0.169899374397819), 'ERGAS': np.float64(19.343295109447627), 'Q_avg': np.float64(0.9841322967434051), 'D_lambda': np.float64(0.003775541653284866), 'D_s': np.float64(0.017142555880379183), 'HQNR': np.float64(0.9791479927997443)}
+2025-05-29 01:41:29,176 INFO Epoch 6: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 101.3198).
+2025-05-29 01:41:29,176 INFO Epoch 6: No improvement in key ERGAS metrics. Early stopping counter: 5/20
+2025-05-29 01:41:29,224 INFO Epoch 6 checkpoint saved
+2025-05-29 01:47:38,306 INFO Epoch 7: Running evaluation for early stopping...
+2025-05-29 01:47:38,306 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 01:47:46,652 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20482864490970773), 'ERGAS': np.float64(102.66073257082932), 'Q_avg': np.float64(0.9775212355805017), 'D_lambda': np.float64(0.0045517476646601725), 'D_s': np.float64(0.02024970888176878), 'HQNR': np.float64(0.9752907728009497)}
+2025-05-29 01:47:46,652 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 01:49:08,152 INFO Full Res H5 Metrics: {'SAM': np.float64(0.16683872223089435), 'ERGAS': np.float64(18.95892282293857), 'Q_avg': np.float64(0.9847980807818388), 'D_lambda': np.float64(0.0037075271606865417), 'D_s': np.float64(0.018395216970361207), 'HQNR': np.float64(0.9779674699318146)}
+2025-05-29 01:49:08,153 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 01:49:16,353 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.2055993542381893), 'ERGAS': np.float64(102.95491099350458), 'Q_avg': np.float64(0.9772415491515604), 'D_lambda': np.float64(0.00456887453862643), 'D_s': np.float64(0.019951939876358078), 'HQNR': np.float64(0.9755704966810421)}
+2025-05-29 01:49:16,353 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 01:50:39,826 INFO Full Res MAT Metrics: {'SAM': np.float64(0.16684105072726946), 'ERGAS': np.float64(18.959166891085104), 'Q_avg': np.float64(0.9847977101545069), 'D_lambda': np.float64(0.003707578905050432), 'D_s': np.float64(0.018394354752504588), 'HQNR': np.float64(0.9779682789853785)}
+2025-05-29 01:50:39,826 INFO Epoch 7: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 102.6607).
+2025-05-29 01:50:39,827 INFO Epoch 7: No improvement in key ERGAS metrics. Early stopping counter: 6/20
+2025-05-29 01:50:39,875 INFO Epoch 7 checkpoint saved
+2025-05-29 01:56:51,528 INFO Epoch 8: Running evaluation for early stopping...
+2025-05-29 01:56:51,528 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 01:56:59,073 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20849783970226582), 'ERGAS': np.float64(103.07330120331275), 'Q_avg': np.float64(0.9774006665566567), 'D_lambda': np.float64(0.004633285326717019), 'D_s': np.float64(0.022729461565231646), 'HQNR': np.float64(0.9727425264738339)}
+2025-05-29 01:56:59,074 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 01:58:20,755 INFO Full Res H5 Metrics: {'SAM': np.float64(0.1584503140941484), 'ERGAS': np.float64(17.890011401395654), 'Q_avg': np.float64(0.9859000372564808), 'D_lambda': np.float64(0.0035211180909810757), 'D_s': np.float64(0.021167585863552395), 'HQNR': np.float64(0.9753878402789231)}
+2025-05-29 01:58:20,755 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 01:58:28,234 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.2064704415138368), 'ERGAS': np.float64(101.90161801257443), 'Q_avg': np.float64(0.9777407184926371), 'D_lambda': np.float64(0.004588232033640819), 'D_s': np.float64(0.021600175408513993), 'HQNR': np.float64(0.9739111413747944)}
+2025-05-29 01:58:28,235 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 01:59:51,606 INFO Full Res MAT Metrics: {'SAM': np.float64(0.15845033502887867), 'ERGAS': np.float64(17.890013289489826), 'Q_avg': np.float64(0.9859000345621501), 'D_lambda': np.float64(0.0035211185561973037), 'D_s': np.float64(0.021167590166946693), 'HQNR': np.float64(0.9753878355268315)}
+2025-05-29 01:59:51,609 INFO Epoch 8: Full Res H5 ERGAS improved from 18.3197 to 17.8900
+2025-05-29 01:59:51,609 INFO Epoch 8: Full Res MAT ERGAS improved from 18.3197 to 17.8900
+2025-05-29 01:59:51,609 INFO Epoch 8: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 103.0733).
+2025-05-29 01:59:51,609 INFO Epoch 8: Progress made in at least one ERGAS metric. Early stopping counter reset.
+2025-05-29 01:59:51,655 INFO Epoch 8 checkpoint saved
+2025-05-29 02:06:03,825 INFO Epoch 9: Running evaluation for early stopping...
+2025-05-29 02:06:03,826 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 02:06:11,120 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.205968464549874), 'ERGAS': np.float64(101.74221047942667), 'Q_avg': np.float64(0.9778773208075217), 'D_lambda': np.float64(0.004577076989997201), 'D_s': np.float64(0.02247499207423297), 'HQNR': np.float64(0.9730509934018375)}
+2025-05-29 02:06:11,121 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 02:07:32,038 INFO Full Res H5 Metrics: {'SAM': np.float64(0.15317543126921324), 'ERGAS': np.float64(17.198680173532296), 'Q_avg': np.float64(0.9866262108043159), 'D_lambda': np.float64(0.0034038984726491818), 'D_s': np.float64(0.021796951377969657), 'HQNR': np.float64(0.9748753344950464)}
+2025-05-29 02:07:32,038 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 02:07:39,856 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20588525647874123), 'ERGAS': np.float64(101.53538073837477), 'Q_avg': np.float64(0.9779108494695654), 'D_lambda': np.float64(0.004575227921749805), 'D_s': np.float64(0.021861349920297708), 'HQNR': np.float64(0.9736638015721099)}
+2025-05-29 02:07:39,856 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 02:09:01,647 INFO Full Res MAT Metrics: {'SAM': np.float64(0.15317289910385676), 'ERGAS': np.float64(17.198378399604415), 'Q_avg': np.float64(0.986626300109366), 'D_lambda': np.float64(0.003403842202307929), 'D_s': np.float64(0.02179721665601131), 'HQNR': np.float64(0.9748751251898777)}
+2025-05-29 02:09:01,648 INFO Epoch 9: Full Res H5 ERGAS improved from 17.8900 to 17.1987
+2025-05-29 02:09:01,653 INFO Epoch 9: Full Res MAT ERGAS improved from 17.8900 to 17.1984
+2025-05-29 02:09:01,653 INFO Epoch 9: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 101.7422).
+2025-05-29 02:09:01,653 INFO Epoch 9: Progress made in at least one ERGAS metric. Early stopping counter reset.
+2025-05-29 02:09:01,695 INFO Epoch 9 checkpoint saved
+2025-05-29 02:15:14,589 INFO Epoch 10: Running evaluation for early stopping...
+2025-05-29 02:15:14,589 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 02:15:22,173 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20958185568243765), 'ERGAS': np.float64(104.68241485235016), 'Q_avg': np.float64(0.9765095034441325), 'D_lambda': np.float64(0.004657374570720836), 'D_s': np.float64(0.021826721491139196), 'HQNR': np.float64(0.9736173514037519)}
+2025-05-29 02:15:22,174 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 02:16:43,868 INFO Full Res H5 Metrics: {'SAM': np.float64(0.1514866460551654), 'ERGAS': np.float64(17.277436568222132), 'Q_avg': np.float64(0.987021900111821), 'D_lambda': np.float64(0.003366369912337009), 'D_s': np.float64(0.01931482669342291), 'HQNR': np.float64(0.9773855076110916)}
+2025-05-29 02:16:43,868 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 02:16:52,413 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20626559143672124), 'ERGAS': np.float64(102.60979930843182), 'Q_avg': np.float64(0.9774141676922943), 'D_lambda': np.float64(0.004583679809704916), 'D_s': np.float64(0.02035720585604902), 'HQNR': np.float64(0.9751528330326099)}
+2025-05-29 02:16:52,414 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 02:18:15,265 INFO Full Res MAT Metrics: {'SAM': np.float64(0.15148464017400998), 'ERGAS': np.float64(17.2771771040888), 'Q_avg': np.float64(0.9870229333445133), 'D_lambda': np.float64(0.0033663253372002216), 'D_s': np.float64(0.01931450435508535), 'HQNR': np.float64(0.9773858726628625)}
+2025-05-29 02:18:15,269 INFO Epoch 10: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 104.6824).
+2025-05-29 02:18:15,269 INFO Epoch 10: No improvement in key ERGAS metrics. Early stopping counter: 1/20
+2025-05-29 02:18:15,327 INFO Epoch 10 checkpoint saved
+2025-05-29 02:24:28,149 INFO Epoch 11: Running evaluation for early stopping...
+2025-05-29 02:24:28,149 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 02:24:36,167 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.2093894609370614), 'ERGAS': np.float64(103.38668663088967), 'Q_avg': np.float64(0.9764056748789386), 'D_lambda': np.float64(0.0046530991319346975), 'D_s': np.float64(0.02339928460245491), 'HQNR': np.float64(0.9720564739532305)}
+2025-05-29 02:24:36,167 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 02:25:55,246 INFO Full Res H5 Metrics: {'SAM': np.float64(0.15493761458355343), 'ERGAS': np.float64(17.5166324842061), 'Q_avg': np.float64(0.9865173759960897), 'D_lambda': np.float64(0.0034430581018567432), 'D_s': np.float64(0.020280806331589917), 'HQNR': np.float64(0.9763477618399774)}
+2025-05-29 02:25:55,246 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 02:26:03,620 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20591246928870874), 'ERGAS': np.float64(101.39111209063807), 'Q_avg': np.float64(0.9774154561153414), 'D_lambda': np.float64(0.004575832650860194), 'D_s': np.float64(0.022450024413453885), 'HQNR': np.float64(0.973077375805592)}
+2025-05-29 02:26:03,621 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 02:27:25,577 INFO Full Res MAT Metrics: {'SAM': np.float64(0.15493779303279662), 'ERGAS': np.float64(17.516653193934985), 'Q_avg': np.float64(0.9865173604603822), 'D_lambda': np.float64(0.0034430620673954805), 'D_s': np.float64(0.02028078915732632), 'HQNR': np.float64(0.9763477750694243)}
+2025-05-29 02:27:25,581 INFO Epoch 11: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 103.3867).
+2025-05-29 02:27:25,581 INFO Epoch 11: No improvement in key ERGAS metrics. Early stopping counter: 2/20
+2025-05-29 02:27:25,619 INFO Epoch 11 checkpoint saved
+2025-05-29 02:33:37,348 INFO Epoch 12: Running evaluation for early stopping...
+2025-05-29 02:33:37,348 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 02:33:44,999 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.21121256100405064), 'ERGAS': np.float64(104.83108920861801), 'Q_avg': np.float64(0.9761922493997339), 'D_lambda': np.float64(0.00469361246675668), 'D_s': np.float64(0.023337947886101894), 'HQNR': np.float64(0.9720785486687327)}
+2025-05-29 02:33:44,999 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 02:35:06,909 INFO Full Res H5 Metrics: {'SAM': np.float64(0.14762957383576422), 'ERGAS': np.float64(16.562310836988352), 'Q_avg': np.float64(0.9869633637345278), 'D_lambda': np.float64(0.0032806571963503173), 'D_s': np.float64(0.02275060660279989), 'HQNR': np.float64(0.9740452963349503)}
+2025-05-29 02:35:06,909 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 02:35:15,034 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20706907751014075), 'ERGAS': np.float64(102.15927882969983), 'Q_avg': np.float64(0.9772860648794296), 'D_lambda': np.float64(0.004601535055780905), 'D_s': np.float64(0.023221407513172088), 'HQNR': np.float64(0.9722855099974967)}
+2025-05-29 02:35:15,035 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 02:36:37,450 INFO Full Res MAT Metrics: {'SAM': np.float64(0.1476295695960903), 'ERGAS': np.float64(16.56231025977821), 'Q_avg': np.float64(0.9869633658147052), 'D_lambda': np.float64(0.00328065710213534), 'D_s': np.float64(0.0227506080254834), 'HQNR': np.float64(0.9740452950087709)}
+2025-05-29 02:36:37,450 INFO Epoch 12: Full Res H5 ERGAS improved from 17.1987 to 16.5623
+2025-05-29 02:36:37,450 INFO Epoch 12: Full Res MAT ERGAS improved from 17.1984 to 16.5623
+2025-05-29 02:36:37,451 INFO Epoch 12: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 104.8311).
+2025-05-29 02:36:37,451 INFO Epoch 12: Progress made in at least one ERGAS metric. Early stopping counter reset.
+2025-05-29 02:36:37,502 INFO Epoch 12 checkpoint saved
+2025-05-29 02:42:49,932 INFO Epoch 13: Running evaluation for early stopping...
+2025-05-29 02:42:49,932 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 02:42:57,622 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20939677516946884), 'ERGAS': np.float64(103.48546261693627), 'Q_avg': np.float64(0.9769868974764935), 'D_lambda': np.float64(0.0046532616704326405), 'D_s': np.float64(0.023534885670565685), 'HQNR': np.float64(0.9719211955745248)}
+2025-05-29 02:42:57,623 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 02:44:17,110 INFO Full Res H5 Metrics: {'SAM': np.float64(0.14719766945911097), 'ERGAS': np.float64(16.475480513970048), 'Q_avg': np.float64(0.9872959219023831), 'D_lambda': np.float64(0.0032710593213135775), 'D_s': np.float64(0.021946478648927875), 'HQNR': np.float64(0.9748561368989443)}
+2025-05-29 02:44:17,118 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 02:44:26,941 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20416114851237283), 'ERGAS': np.float64(100.4072140215377), 'Q_avg': np.float64(0.9783745491917069), 'D_lambda': np.float64(0.004536914411386064), 'D_s': np.float64(0.02336946476601915), 'HQNR': np.float64(0.9722009416367309)}
+2025-05-29 02:44:26,941 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 02:45:48,106 INFO Full Res MAT Metrics: {'SAM': np.float64(0.14719769231501761), 'ERGAS': np.float64(16.475483004292368), 'Q_avg': np.float64(0.9872959197039485), 'D_lambda': np.float64(0.003271059829222615), 'D_s': np.float64(0.0219464757627935), 'HQNR': np.float64(0.9748561392732693)}
+2025-05-29 02:45:48,106 INFO Epoch 13: Full Res H5 ERGAS improved from 16.5623 to 16.4755
+2025-05-29 02:45:48,106 INFO Epoch 13: Full Res MAT ERGAS improved from 16.5623 to 16.4755
+2025-05-29 02:45:48,106 INFO Epoch 13: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 103.4855).
+2025-05-29 02:45:48,107 INFO Epoch 13: Progress made in at least one ERGAS metric. Early stopping counter reset.
+2025-05-29 02:45:48,151 INFO Epoch 13 checkpoint saved
+2025-05-29 02:52:03,235 INFO Epoch 14: Running evaluation for early stopping...
+2025-05-29 02:52:03,235 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 02:52:11,384 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.21297404422943372), 'ERGAS': np.float64(105.69606666253614), 'Q_avg': np.float64(0.9761328824007103), 'D_lambda': np.float64(0.004732756538431859), 'D_s': np.float64(0.02290354310330011), 'HQNR': np.float64(0.972472345012225)}
+2025-05-29 02:52:11,385 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 02:53:31,807 INFO Full Res H5 Metrics: {'SAM': np.float64(0.1548367978726701), 'ERGAS': np.float64(17.444254114619568), 'Q_avg': np.float64(0.9869457874770508), 'D_lambda': np.float64(0.0034408177305037813), 'D_s': np.float64(0.01916844942807583), 'HQNR': np.float64(0.9774588578073933)}
+2025-05-29 02:53:31,807 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 02:53:39,726 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20868829987072757), 'ERGAS': np.float64(102.50034006821372), 'Q_avg': np.float64(0.9773632310764979), 'D_lambda': np.float64(0.004637517774905057), 'D_s': np.float64(0.021830748244209986), 'HQNR': np.float64(0.9736334717036836)}
+2025-05-29 02:53:39,726 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 02:55:02,616 INFO Full Res MAT Metrics: {'SAM': np.float64(0.15483657010451513), 'ERGAS': np.float64(17.44422742530339), 'Q_avg': np.float64(0.9869458369546154), 'D_lambda': np.float64(0.0034408126689892253), 'D_s': np.float64(0.019168449397105363), 'HQNR': np.float64(0.9774588627966304)}
+2025-05-29 02:55:02,617 INFO Epoch 14: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 105.6961).
+2025-05-29 02:55:02,617 INFO Epoch 14: No improvement in key ERGAS metrics. Early stopping counter: 1/20
+2025-05-29 02:55:02,656 INFO Epoch 14 checkpoint saved
+2025-05-29 03:01:16,098 INFO Epoch 15: Running evaluation for early stopping...
+2025-05-29 03:01:16,098 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 03:01:23,718 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20918546341142824), 'ERGAS': np.float64(102.35100698133239), 'Q_avg': np.float64(0.9768397281646399), 'D_lambda': np.float64(0.004648565853587294), 'D_s': np.float64(0.02556815761990009), 'HQNR': np.float64(0.9699026452277794)}
+2025-05-29 03:01:23,720 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 03:02:45,773 INFO Full Res H5 Metrics: {'SAM': np.float64(0.13733436676474314), 'ERGAS': np.float64(15.211964963665755), 'Q_avg': np.float64(0.9876911586579844), 'D_lambda': np.float64(0.0030518748169942925), 'D_s': np.float64(0.024940584041394803), 'HQNR': np.float64(0.9720855967679333)}
+2025-05-29 03:02:45,774 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 03:02:53,740 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20410389949268426), 'ERGAS': np.float64(99.26598564699188), 'Q_avg': np.float64(0.978295161357174), 'D_lambda': np.float64(0.004535642210948538), 'D_s': np.float64(0.024702787139822546), 'HQNR': np.float64(0.9708746193133223)}
+2025-05-29 03:02:53,741 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 03:04:17,311 INFO Full Res MAT Metrics: {'SAM': np.float64(0.13733443452583258), 'ERGAS': np.float64(15.211973161833253), 'Q_avg': np.float64(0.9876911544719211), 'D_lambda': np.float64(0.0030518763227962787), 'D_s': np.float64(0.02494057918521283), 'HQNR': np.float64(0.9720856001789248)}
+2025-05-29 03:04:17,311 INFO Epoch 15: Full Res H5 ERGAS improved from 16.4755 to 15.2120
+2025-05-29 03:04:17,312 INFO Epoch 15: Full Res MAT ERGAS improved from 16.4755 to 15.2120
+2025-05-29 03:04:17,312 INFO Epoch 15: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 102.3510).
+2025-05-29 03:04:17,312 INFO Epoch 15: Progress made in at least one ERGAS metric. Early stopping counter reset.
+2025-05-29 03:04:17,355 INFO Epoch 15 checkpoint saved
+2025-05-29 03:10:31,324 INFO Epoch 16: Running evaluation for early stopping...
+2025-05-29 03:10:31,324 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 03:10:38,780 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.21258213800501968), 'ERGAS': np.float64(105.43423889286991), 'Q_avg': np.float64(0.9764420244689219), 'D_lambda': np.float64(0.004724047511222659), 'D_s': np.float64(0.02236321894263956), 'HQNR': np.float64(0.9730190326572273)}
+2025-05-29 03:10:38,780 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 03:12:03,614 INFO Full Res H5 Metrics: {'SAM': np.float64(0.14177027551428753), 'ERGAS': np.float64(15.820114500976734), 'Q_avg': np.float64(0.9880636561187041), 'D_lambda': np.float64(0.003150450566984168), 'D_s': np.float64(0.022760376450477942), 'HQNR': np.float64(0.9741629127346967)}
+2025-05-29 03:12:03,615 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 03:12:11,554 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.2062805148688792), 'ERGAS': np.float64(102.02957003003223), 'Q_avg': np.float64(0.9779914440548296), 'D_lambda': np.float64(0.004584011441530649), 'D_s': np.float64(0.022046603540366666), 'HQNR': np.float64(0.9734722603506443)}
+2025-05-29 03:12:11,555 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 03:13:35,415 INFO Full Res MAT Metrics: {'SAM': np.float64(0.1417702854273636), 'ERGAS': np.float64(15.820115457913122), 'Q_avg': np.float64(0.9880636573238191), 'D_lambda': np.float64(0.003150450787274747), 'D_s': np.float64(0.022760378739395896), 'HQNR': np.float64(0.9741629102379179)}
+2025-05-29 03:13:35,415 INFO Epoch 16: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 105.4342).
+2025-05-29 03:13:35,415 INFO Epoch 16: No improvement in key ERGAS metrics. Early stopping counter: 1/20
+2025-05-29 03:13:35,463 INFO Epoch 16 checkpoint saved
+2025-05-29 03:19:50,485 INFO Epoch 17: Running evaluation for early stopping...
+2025-05-29 03:19:50,486 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 03:19:57,827 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.21211754987922354), 'ERGAS': np.float64(104.58499024908512), 'Q_avg': np.float64(0.9766533718810179), 'D_lambda': np.float64(0.004713723330649414), 'D_s': np.float64(0.023606512651628303), 'HQNR': np.float64(0.9717917051239373)}
+2025-05-29 03:19:57,827 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 03:21:20,496 INFO Full Res H5 Metrics: {'SAM': np.float64(0.14224987976908585), 'ERGAS': np.float64(15.768797924075198), 'Q_avg': np.float64(0.987686158222132), 'D_lambda': np.float64(0.0031611084393130184), 'D_s': np.float64(0.025195469553168204), 'HQNR': np.float64(0.9717255469181335)}
+2025-05-29 03:21:20,496 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 03:21:29,899 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20470216549353557), 'ERGAS': np.float64(100.49647865828413), 'Q_avg': np.float64(0.9783833782735313), 'D_lambda': np.float64(0.004548937010967457), 'D_s': np.float64(0.023810779090949342), 'HQNR': np.float64(0.9717503951638543)}
+2025-05-29 03:21:29,899 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 03:22:54,033 INFO Full Res MAT Metrics: {'SAM': np.float64(0.14224998562174612), 'ERGAS': np.float64(15.768809683006248), 'Q_avg': np.float64(0.987686149330238), 'D_lambda': np.float64(0.0031611107915943586), 'D_s': np.float64(0.025195474077887574), 'HQNR': np.float64(0.971725540115696)}
+2025-05-29 03:22:54,042 INFO Epoch 17: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 104.5850).
+2025-05-29 03:22:54,042 INFO Epoch 17: No improvement in key ERGAS metrics. Early stopping counter: 2/20
+2025-05-29 03:22:54,080 INFO Epoch 17 checkpoint saved
+2025-05-29 03:29:09,576 INFO Epoch 18: Running evaluation for early stopping...
+2025-05-29 03:29:09,577 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 03:29:16,795 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.21231878540097687), 'ERGAS': np.float64(104.59589509500775), 'Q_avg': np.float64(0.9764083072867396), 'D_lambda': np.float64(0.004718195231132819), 'D_s': np.float64(0.02391993739258309), 'HQNR': np.float64(0.9714755018286902)}
+2025-05-29 03:29:16,796 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 03:30:38,045 INFO Full Res H5 Metrics: {'SAM': np.float64(0.14197707851881242), 'ERGAS': np.float64(15.732192285237222), 'Q_avg': np.float64(0.98747393003098), 'D_lambda': np.float64(0.0031550461893069424), 'D_s': np.float64(0.026196493101426348), 'HQNR': np.float64(0.9707340236288939)}
+2025-05-29 03:30:38,045 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 03:30:47,285 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20449355211293624), 'ERGAS': np.float64(100.34310462701), 'Q_avg': np.float64(0.9781977801490844), 'D_lambda': np.float64(0.004544301158065251), 'D_s': np.float64(0.024266458647884664), 'HQNR': np.float64(0.9713017341742225)}
+2025-05-29 03:30:47,285 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 03:32:10,149 INFO Full Res MAT Metrics: {'SAM': np.float64(0.14197704794896066), 'ERGAS': np.float64(15.732188800616361), 'Q_avg': np.float64(0.9874739322774652), 'D_lambda': np.float64(0.003155045509976904), 'D_s': np.float64(0.02619649984403612), 'HQNR': np.float64(0.970734017577124)}
+2025-05-29 03:32:10,149 INFO Epoch 18: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 104.5959).
+2025-05-29 03:32:10,149 INFO Epoch 18: No improvement in key ERGAS metrics. Early stopping counter: 3/20
+2025-05-29 03:32:10,201 INFO Epoch 18 checkpoint saved
+2025-05-29 03:38:23,228 INFO Epoch 19: Running evaluation for early stopping...
+2025-05-29 03:38:23,228 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 03:38:30,227 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.2109568413663497), 'ERGAS': np.float64(104.40115465384717), 'Q_avg': np.float64(0.9766505712097345), 'D_lambda': np.float64(0.004687929808141106), 'D_s': np.float64(0.022691890381101632), 'HQNR': np.float64(0.9727270411647417)}
+2025-05-29 03:38:30,228 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 03:39:51,392 INFO Full Res H5 Metrics: {'SAM': np.float64(0.14010321432117323), 'ERGAS': np.float64(15.554840605847179), 'Q_avg': np.float64(0.9879684173527276), 'D_lambda': np.float64(0.0031134047626927386), 'D_s': np.float64(0.02555300687104073), 'HQNR': np.float64(0.9714156864549102)}
+2025-05-29 03:39:51,392 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 03:39:59,097 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20526362680789595), 'ERGAS': np.float64(101.16230817521617), 'Q_avg': np.float64(0.9781322769498436), 'D_lambda': np.float64(0.004561413929064354), 'D_s': np.float64(0.0228029593397447), 'HQNR': np.float64(0.9727413299997998)}
+2025-05-29 03:39:59,097 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 03:41:21,295 INFO Full Res MAT Metrics: {'SAM': np.float64(0.1401032146593781), 'ERGAS': np.float64(15.55484015753145), 'Q_avg': np.float64(0.9879684362827078), 'D_lambda': np.float64(0.0031134047702084033), 'D_s': np.float64(0.02555302540050275), 'HQNR': np.float64(0.9714156679683136)}
+2025-05-29 03:41:21,298 INFO Epoch 19: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 104.4012).
+2025-05-29 03:41:21,299 INFO Epoch 19: No improvement in key ERGAS metrics. Early stopping counter: 4/20
+2025-05-29 03:41:21,339 INFO Epoch 19 checkpoint saved
+2025-05-29 03:47:37,361 INFO Epoch 20: Running evaluation for early stopping...
+2025-05-29 03:47:37,361 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 03:47:44,710 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.21161515772023373), 'ERGAS': np.float64(104.09692301682689), 'Q_avg': np.float64(0.9765574768427628), 'D_lambda': np.float64(0.004702559060449639), 'D_s': np.float64(0.024184791808312695), 'HQNR': np.float64(0.9712274287585505)}
+2025-05-29 03:47:44,711 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 03:49:06,982 INFO Full Res H5 Metrics: {'SAM': np.float64(0.13785406289403185), 'ERGAS': np.float64(15.255644857719247), 'Q_avg': np.float64(0.9873904373732272), 'D_lambda': np.float64(0.0030634236198673745), 'D_s': np.float64(0.027484865931081258), 'HQNR': np.float64(0.9695386444335317)}
+2025-05-29 03:49:06,982 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 03:49:15,723 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.2050140818749489), 'ERGAS': np.float64(100.46719357934776), 'Q_avg': np.float64(0.9781765601525307), 'D_lambda': np.float64(0.004555868486109975), 'D_s': np.float64(0.024437872841012464), 'HQNR': np.float64(0.9711202635221282)}
+2025-05-29 03:49:15,723 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 03:50:38,200 INFO Full Res MAT Metrics: {'SAM': np.float64(0.13785442144906937), 'ERGAS': np.float64(15.255683539239536), 'Q_avg': np.float64(0.9873904162411341), 'D_lambda': np.float64(0.0030634315877570975), 'D_s': np.float64(0.02748489719188444), 'HQNR': np.float64(0.9695386055428739)}
+2025-05-29 03:50:38,201 INFO Epoch 20: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 104.0969).
+2025-05-29 03:50:38,201 INFO Epoch 20: No improvement in key ERGAS metrics. Early stopping counter: 5/20
+2025-05-29 03:50:38,250 INFO Epoch 20 checkpoint saved
+2025-05-29 03:56:50,543 INFO Epoch 21: Running evaluation for early stopping...
+2025-05-29 03:56:50,544 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 03:56:58,214 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.21007967920244716), 'ERGAS': np.float64(103.18629480596141), 'Q_avg': np.float64(0.9772771809036115), 'D_lambda': np.float64(0.004668437315609937), 'D_s': np.float64(0.023007033026988772), 'HQNR': np.float64(0.9724325183845537)}
+2025-05-29 03:56:58,214 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 03:58:20,808 INFO Full Res H5 Metrics: {'SAM': np.float64(0.1387762894137059), 'ERGAS': np.float64(15.337892760679628), 'Q_avg': np.float64(0.9871983715697141), 'D_lambda': np.float64(0.0030839175425267976), 'D_s': np.float64(0.027522944500301943), 'HQNR': np.float64(0.969480891329362)}
+2025-05-29 03:58:20,809 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 03:58:29,937 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20397685850997474), 'ERGAS': np.float64(99.73394393966608), 'Q_avg': np.float64(0.9787783219281223), 'D_lambda': np.float64(0.004532819077999438), 'D_s': np.float64(0.023623304140652574), 'HQNR': np.float64(0.9719533337747397)}
+2025-05-29 03:58:29,937 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 03:59:53,766 INFO Full Res MAT Metrics: {'SAM': np.float64(0.1387738045307026), 'ERGAS': np.float64(15.337827037280723), 'Q_avg': np.float64(0.9871938583544333), 'D_lambda': np.float64(0.0030838623229045023), 'D_s': np.float64(0.02753153090515239), 'HQNR': np.float64(0.9694723936506104)}
+2025-05-29 03:59:53,767 INFO Epoch 21: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 103.1863).
+2025-05-29 03:59:53,767 INFO Epoch 21: No improvement in key ERGAS metrics. Early stopping counter: 6/20
+2025-05-29 04:06:06,290 INFO Epoch 22: Running evaluation for early stopping...
+2025-05-29 04:06:06,291 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 04:06:14,424 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.21224948146918515), 'ERGAS': np.float64(104.01548357645285), 'Q_avg': np.float64(0.9766991675790591), 'D_lambda': np.float64(0.004716655143759669), 'D_s': np.float64(0.02422095798518679), 'HQNR': np.float64(0.9711772328613781)}
+2025-05-29 04:06:14,425 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 04:07:37,320 INFO Full Res H5 Metrics: {'SAM': np.float64(0.1404466628703011), 'ERGAS': np.float64(15.518479121623121), 'Q_avg': np.float64(0.9881630737366646), 'D_lambda': np.float64(0.0031210369526733584), 'D_s': np.float64(0.025458998610240834), 'HQNR': np.float64(0.971502098877868)}
+2025-05-29 04:07:37,328 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 04:07:45,441 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20404139227088608), 'ERGAS': np.float64(99.85349326355808), 'Q_avg': np.float64(0.9786113872549065), 'D_lambda': np.float64(0.004534253161575247), 'D_s': np.float64(0.02392155345235103), 'HQNR': np.float64(0.9716545232349267)}
+2025-05-29 04:07:45,441 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 04:09:10,527 INFO Full Res MAT Metrics: {'SAM': np.float64(0.14044669642734145), 'ERGAS': np.float64(15.518483029163804), 'Q_avg': np.float64(0.9881630667336296), 'D_lambda': np.float64(0.0031210376983853653), 'D_s': np.float64(0.02545899968189911), 'HQNR': np.float64(0.9715020970840177)}
+2025-05-29 04:09:10,527 INFO Epoch 22: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 104.0155).
+2025-05-29 04:09:10,527 INFO Epoch 22: No improvement in key ERGAS metrics. Early stopping counter: 7/20
+2025-05-29 04:15:26,149 INFO Epoch 23: Running evaluation for early stopping...
+2025-05-29 04:15:26,150 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 04:15:33,420 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.2084213120036945), 'ERGAS': np.float64(102.7216669228191), 'Q_avg': np.float64(0.9770796224556433), 'D_lambda': np.float64(0.004631584711193211), 'D_s': np.float64(0.02360455334893217), 'HQNR': np.float64(0.9718732607473715)}
+2025-05-29 04:15:33,420 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 04:16:55,726 INFO Full Res H5 Metrics: {'SAM': np.float64(0.1368786448892541), 'ERGAS': np.float64(15.175572951841172), 'Q_avg': np.float64(0.9882010887399577), 'D_lambda': np.float64(0.0030417476642056467), 'D_s': np.float64(0.025521991749864997), 'HQNR': np.float64(0.9715165798510835)}
+2025-05-29 04:16:55,726 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 04:17:03,487 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.2026626538572276), 'ERGAS': np.float64(99.4330703879401), 'Q_avg': np.float64(0.9785925710099754), 'D_lambda': np.float64(0.004503614530160613), 'D_s': np.float64(0.023992886921848082), 'HQNR': np.float64(0.9716140364070632)}
+2025-05-29 04:17:03,487 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 04:18:27,937 INFO Full Res MAT Metrics: {'SAM': np.float64(0.13687864505626077), 'ERGAS': np.float64(15.175572972408807), 'Q_avg': np.float64(0.98820108866937), 'D_lambda': np.float64(0.0030417476679169067), 'D_s': np.float64(0.025521991884514032), 'HQNR': np.float64(0.971516579713579)}
+2025-05-29 04:18:27,937 INFO Epoch 23: Full Res H5 ERGAS improved from 15.2120 to 15.1756
+2025-05-29 04:18:27,938 INFO Epoch 23: Full Res MAT ERGAS improved from 15.2120 to 15.1756
+2025-05-29 04:18:27,938 INFO Epoch 23: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 102.7217).
+2025-05-29 04:18:27,938 INFO Epoch 23: Progress made in at least one ERGAS metric. Early stopping counter reset.
+2025-05-29 04:24:43,802 INFO Epoch 24: Running evaluation for early stopping...
+2025-05-29 04:24:43,802 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 04:24:51,242 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20859829343706307), 'ERGAS': np.float64(103.68148845765265), 'Q_avg': np.float64(0.9770970475311046), 'D_lambda': np.float64(0.004635517631934734), 'D_s': np.float64(0.022393051923843804), 'HQNR': np.float64(0.9730751938605853)}
+2025-05-29 04:24:51,243 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 04:26:13,382 INFO Full Res H5 Metrics: {'SAM': np.float64(0.1472767816958068), 'ERGAS': np.float64(16.480648516096885), 'Q_avg': np.float64(0.9878221871118024), 'D_lambda': np.float64(0.003272817371017929), 'D_s': np.float64(0.022796495352221297), 'HQNR': np.float64(0.9740079849495838)}
+2025-05-29 04:26:13,383 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 04:26:21,821 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20431737169493122), 'ERGAS': np.float64(101.16330814882161), 'Q_avg': np.float64(0.9785517965276455), 'D_lambda': np.float64(0.004540386037665139), 'D_s': np.float64(0.022133960906269245), 'HQNR': np.float64(0.9734278036924862)}
+2025-05-29 04:26:21,821 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 04:27:44,118 INFO Full Res MAT Metrics: {'SAM': np.float64(0.14727678459771543), 'ERGAS': np.float64(16.480648930727945), 'Q_avg': np.float64(0.9878221880387714), 'D_lambda': np.float64(0.0032728174355047867), 'D_s': np.float64(0.022796490602246273), 'HQNR': np.float64(0.9740079896235704)}
+2025-05-29 04:27:44,118 INFO Epoch 24: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 103.6815).
+2025-05-29 04:27:44,118 INFO Epoch 24: No improvement in key ERGAS metrics. Early stopping counter: 1/20
+2025-05-29 04:33:57,343 INFO Epoch 25: Running evaluation for early stopping...
+2025-05-29 04:33:57,343 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 04:34:06,093 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.21060665682639187), 'ERGAS': np.float64(104.71845312032437), 'Q_avg': np.float64(0.9763219020594907), 'D_lambda': np.float64(0.004680147929475376), 'D_s': np.float64(0.02345465858997108), 'HQNR': np.float64(0.9719747708416534)}
+2025-05-29 04:34:06,093 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 04:35:26,180 INFO Full Res H5 Metrics: {'SAM': np.float64(0.14090101731475696), 'ERGAS': np.float64(15.616596894271627), 'Q_avg': np.float64(0.987464542271405), 'D_lambda': np.float64(0.0031311337181057107), 'D_s': np.float64(0.025415195890339692), 'HQNR': np.float64(0.9715360950345285)}
+2025-05-29 04:35:26,181 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 04:35:34,238 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20393272960923445), 'ERGAS': np.float64(100.87080442984383), 'Q_avg': np.float64(0.9781936046772175), 'D_lambda': np.float64(0.004531838435760766), 'D_s': np.float64(0.023328803687127524), 'HQNR': np.float64(0.9722467658574354)}
+2025-05-29 04:35:34,238 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 04:36:57,326 INFO Full Res MAT Metrics: {'SAM': np.float64(0.14090102869677845), 'ERGAS': np.float64(15.616597440269397), 'Q_avg': np.float64(0.9874645248977864), 'D_lambda': np.float64(0.003131133971039521), 'D_s': np.float64(0.025415228704240928), 'HQNR': np.float64(0.9715360620627831)}
+2025-05-29 04:36:57,327 INFO Epoch 25: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 104.7185).
+2025-05-29 04:36:57,327 INFO Epoch 25: No improvement in key ERGAS metrics. Early stopping counter: 2/20
+2025-05-29 04:36:57,365 INFO Epoch 25 checkpoint saved
+2025-05-29 04:43:15,674 INFO Epoch 26: Running evaluation for early stopping...
+2025-05-29 04:43:15,675 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 04:43:22,941 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.2122318838470188), 'ERGAS': np.float64(104.04963144032388), 'Q_avg': np.float64(0.9765944666303366), 'D_lambda': np.float64(0.004716264085489307), 'D_s': np.float64(0.02397997962768722), 'HQNR': np.float64(0.9714177145116955)}
+2025-05-29 04:43:22,942 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 04:44:46,412 INFO Full Res H5 Metrics: {'SAM': np.float64(0.14292691867738166), 'ERGAS': np.float64(15.835082682251468), 'Q_avg': np.float64(0.987493891139468), 'D_lambda': np.float64(0.003176153748386259), 'D_s': np.float64(0.025820780319673643), 'HQNR': np.float64(0.9710880907515718)}
+2025-05-29 04:44:46,412 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 04:44:54,500 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.204229685077223), 'ERGAS': np.float64(99.88522973404369), 'Q_avg': np.float64(0.9785579701352811), 'D_lambda': np.float64(0.004538437446160511), 'D_s': np.float64(0.024245124197362432), 'HQNR': np.float64(0.9713289465885768)}
+2025-05-29 04:44:54,500 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 04:46:18,777 INFO Full Res MAT Metrics: {'SAM': np.float64(0.14292693476023752), 'ERGAS': np.float64(15.835084239317814), 'Q_avg': np.float64(0.9874938874228889), 'D_lambda': np.float64(0.0031761541057830564), 'D_s': np.float64(0.025820781592686283), 'HQNR': np.float64(0.9710880891337338)}
+2025-05-29 04:46:18,777 INFO Epoch 26: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 104.0496).
+2025-05-29 04:46:18,777 INFO Epoch 26: No improvement in key ERGAS metrics. Early stopping counter: 3/20
+2025-05-29 04:52:33,820 INFO Epoch 27: Running evaluation for early stopping...
+2025-05-29 04:52:33,820 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 04:52:41,090 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.2118491479804748), 'ERGAS': np.float64(104.47765103864981), 'Q_avg': np.float64(0.976309675098755), 'D_lambda': np.float64(0.004707758844010551), 'D_s': np.float64(0.024310961776111167), 'HQNR': np.float64(0.9710959603484465)}
+2025-05-29 04:52:41,090 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 04:54:02,933 INFO Full Res H5 Metrics: {'SAM': np.float64(0.14212189707342773), 'ERGAS': np.float64(15.737400387010686), 'Q_avg': np.float64(0.9875378757224867), 'D_lambda': np.float64(0.0031582643794095047), 'D_s': np.float64(0.02547796801702973), 'HQNR': np.float64(0.9714471567475325)}
+2025-05-29 04:54:02,934 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 04:54:11,021 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20599152818157354), 'ERGAS': np.float64(100.9058075696058), 'Q_avg': np.float64(0.9781727698192366), 'D_lambda': np.float64(0.0045775895151460785), 'D_s': np.float64(0.023916858166816945), 'HQNR': np.float64(0.9716169580637795)}
+2025-05-29 04:54:11,021 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 04:55:32,930 INFO Full Res MAT Metrics: {'SAM': np.float64(0.1421222319825945), 'ERGAS': np.float64(15.737440907127972), 'Q_avg': np.float64(0.9875378857297497), 'D_lambda': np.float64(0.0031582718218354316), 'D_s': np.float64(0.02547785279792829), 'HQNR': np.float64(0.9714472643740859)}
+2025-05-29 04:55:32,930 INFO Epoch 27: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 104.4777).
+2025-05-29 04:55:32,930 INFO Epoch 27: No improvement in key ERGAS metrics. Early stopping counter: 4/20
+2025-05-29 05:01:46,548 INFO Epoch 28: Running evaluation for early stopping...
+2025-05-29 05:01:46,549 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 05:01:55,185 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20750766474747748), 'ERGAS': np.float64(103.82358256642404), 'Q_avg': np.float64(0.9770306059307948), 'D_lambda': np.float64(0.004611281438832833), 'D_s': np.float64(0.019992992989288298), 'HQNR': np.float64(0.9754880040067331)}
+2025-05-29 05:01:55,186 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 05:03:17,000 INFO Full Res H5 Metrics: {'SAM': np.float64(0.1395101793129096), 'ERGAS': np.float64(15.649409020451134), 'Q_avg': np.float64(0.9888240612208937), 'D_lambda': np.float64(0.0031002262069535465), 'D_s': np.float64(0.02344610911468011), 'HQNR': np.float64(0.9735295513635244)}
+2025-05-29 05:03:17,000 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 05:03:25,029 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20003400149471523), 'ERGAS': np.float64(99.8154292329035), 'Q_avg': np.float64(0.9789259701746094), 'D_lambda': np.float64(0.004445200033215893), 'D_s': np.float64(0.019884518997202078), 'HQNR': np.float64(0.9757602474291722)}
+2025-05-29 05:03:25,030 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 05:04:48,743 INFO Full Res MAT Metrics: {'SAM': np.float64(0.1395101882141251), 'ERGAS': np.float64(15.64941023485947), 'Q_avg': np.float64(0.988824058853821), 'D_lambda': np.float64(0.003100226404758335), 'D_s': np.float64(0.023446106818625006), 'HQNR': np.float64(0.973529553458375)}
+2025-05-29 05:04:48,744 INFO Epoch 28: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 103.8236).
+2025-05-29 05:04:48,744 INFO Epoch 28: No improvement in key ERGAS metrics. Early stopping counter: 5/20
+2025-05-29 05:11:02,858 INFO Epoch 29: Running evaluation for early stopping...
+2025-05-29 05:11:02,858 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 05:11:10,271 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.2102741436789693), 'ERGAS': np.float64(103.61070374392254), 'Q_avg': np.float64(0.9767401583997705), 'D_lambda': np.float64(0.004672758748421539), 'D_s': np.float64(0.023578955474570118), 'HQNR': np.float64(0.9718585564883775)}
+2025-05-29 05:11:10,271 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 05:12:30,586 INFO Full Res H5 Metrics: {'SAM': np.float64(0.13963761598178895), 'ERGAS': np.float64(15.479634270541007), 'Q_avg': np.float64(0.9879636847703843), 'D_lambda': np.float64(0.0031030581329286426), 'D_s': np.float64(0.025784796403754355), 'HQNR': np.float64(0.9711953553838194)}
+2025-05-29 05:12:30,587 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 05:12:38,183 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20448602635494967), 'ERGAS': np.float64(100.2810464526642), 'Q_avg': np.float64(0.9784180546740542), 'D_lambda': np.float64(0.004544133918998882), 'D_s': np.float64(0.023572497847670702), 'HQNR': np.float64(0.9719925010075553)}
+2025-05-29 05:12:38,184 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 05:13:58,661 INFO Full Res MAT Metrics: {'SAM': np.float64(0.13963761631517246), 'ERGAS': np.float64(15.479634313446875), 'Q_avg': np.float64(0.9879636846581359), 'D_lambda': np.float64(0.003103058140337166), 'D_s': np.float64(0.025784796481677436), 'HQNR': np.float64(0.9711953552992622)}
+2025-05-29 05:13:58,661 INFO Epoch 29: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 103.6107).
+2025-05-29 05:13:58,662 INFO Epoch 29: No improvement in key ERGAS metrics. Early stopping counter: 6/20
+2025-05-29 05:20:14,665 INFO Epoch 30: Running evaluation for early stopping...
+2025-05-29 05:20:14,665 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 05:20:21,743 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.21228095203477476), 'ERGAS': np.float64(103.9599765764879), 'Q_avg': np.float64(0.9765512628060972), 'D_lambda': np.float64(0.004717354489661663), 'D_s': np.float64(0.024197602539883088), 'HQNR': np.float64(0.9711997504234307)}
+2025-05-29 05:20:21,743 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 05:21:42,152 INFO Full Res H5 Metrics: {'SAM': np.float64(0.1426822146089045), 'ERGAS': np.float64(15.789004438371446), 'Q_avg': np.float64(0.9876051588732933), 'D_lambda': np.float64(0.0031707158801978783), 'D_s': np.float64(0.026705053504418257), 'HQNR': np.float64(0.9702121072592925)}
+2025-05-29 05:21:42,152 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 05:21:49,821 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.2058499506333089), 'ERGAS': np.float64(100.50322850455454), 'Q_avg': np.float64(0.978250812580186), 'D_lambda': np.float64(0.004574443347406865), 'D_s': np.float64(0.02460455097127958), 'HQNR': np.float64(0.970936038514972)}
+2025-05-29 05:21:49,823 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 05:23:12,926 INFO Full Res MAT Metrics: {'SAM': np.float64(0.14268225123124034), 'ERGAS': np.float64(15.789008440398234), 'Q_avg': np.float64(0.9876051479968663), 'D_lambda': np.float64(0.0031707166940275625), 'D_s': np.float64(0.02670502699755426), 'HQNR': np.float64(0.9702121328983899)}
+2025-05-29 05:23:12,927 INFO Epoch 30: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 103.9600).
+2025-05-29 05:23:12,927 INFO Epoch 30: No improvement in key ERGAS metrics. Early stopping counter: 7/20
+2025-05-29 05:29:33,521 INFO Epoch 31: Running evaluation for early stopping...
+2025-05-29 05:29:33,522 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 05:29:41,857 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.21097501524886647), 'ERGAS': np.float64(103.68373038822749), 'Q_avg': np.float64(0.9767038915533762), 'D_lambda': np.float64(0.0046883336721970335), 'D_s': np.float64(0.023662404836051455), 'HQNR': np.float64(0.9717603848670804)}
+2025-05-29 05:29:41,857 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 05:31:03,868 INFO Full Res H5 Metrics: {'SAM': np.float64(0.14406279466291327), 'ERGAS': np.float64(15.923651935064228), 'Q_avg': np.float64(0.9872379306483701), 'D_lambda': np.float64(0.003201395436953628), 'D_s': np.float64(0.026294534637112538), 'HQNR': np.float64(0.9705919032262825)}
+2025-05-29 05:31:03,868 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 05:31:12,174 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.2065218834427668), 'ERGAS': np.float64(100.95573441306203), 'Q_avg': np.float64(0.9780471850994005), 'D_lambda': np.float64(0.00458937518761704), 'D_s': np.float64(0.024095269588586654), 'HQNR': np.float64(0.9714280932071875)}
+2025-05-29 05:31:12,175 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 05:32:36,145 INFO Full Res MAT Metrics: {'SAM': np.float64(0.14406291299769697), 'ERGAS': np.float64(15.92366365685361), 'Q_avg': np.float64(0.987237872749205), 'D_lambda': np.float64(0.0032013980666154886), 'D_s': np.float64(0.02629462005299026), 'HQNR': np.float64(0.9705918154830083)}
+2025-05-29 05:32:36,145 INFO Epoch 31: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 103.6837).
+2025-05-29 05:32:36,146 INFO Epoch 31: No improvement in key ERGAS metrics. Early stopping counter: 8/20
+2025-05-29 05:38:49,843 INFO Epoch 32: Running evaluation for early stopping...
+2025-05-29 05:38:49,844 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 05:38:56,851 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20938464900192993), 'ERGAS': np.float64(102.75188988701788), 'Q_avg': np.float64(0.9771696944193217), 'D_lambda': np.float64(0.004652992200042888), 'D_s': np.float64(0.023346512457174656), 'HQNR': np.float64(0.9721092430240466)}
+2025-05-29 05:38:56,852 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 05:40:19,003 INFO Full Res H5 Metrics: {'SAM': np.float64(0.14835786514800423), 'ERGAS': np.float64(16.431766368141552), 'Q_avg': np.float64(0.9870828640168738), 'D_lambda': np.float64(0.003296841447733427), 'D_s': np.float64(0.02614990266856516), 'HQNR': np.float64(0.9706436723872187)}
+2025-05-29 05:40:19,003 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 05:40:27,068 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.2041876951175592), 'ERGAS': np.float64(99.87452013433686), 'Q_avg': np.float64(0.9786208372190517), 'D_lambda': np.float64(0.004537504335945759), 'D_s': np.float64(0.023850071241048536), 'HQNR': np.float64(0.9717228851498307)}
+2025-05-29 05:40:27,069 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 05:41:49,141 INFO Full Res MAT Metrics: {'SAM': np.float64(0.14835777377390608), 'ERGAS': np.float64(16.431756440323586), 'Q_avg': np.float64(0.9870828746712432), 'D_lambda': np.float64(0.0032968394171979136), 'D_s': np.float64(0.026149901946789615), 'HQNR': np.float64(0.9706436750422714)}
+2025-05-29 05:41:49,142 INFO Epoch 32: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 102.7519).
+2025-05-29 05:41:49,142 INFO Epoch 32: No improvement in key ERGAS metrics. Early stopping counter: 9/20
+2025-05-29 05:48:07,747 INFO Epoch 33: Running evaluation for early stopping...
+2025-05-29 05:48:07,747 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 05:48:15,224 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20977023404278244), 'ERGAS': np.float64(103.13375306184075), 'Q_avg': np.float64(0.9769400087149883), 'D_lambda': np.float64(0.004661560756506277), 'D_s': np.float64(0.023863368880320413), 'HQNR': np.float64(0.9715864905962093)}
+2025-05-29 05:48:15,225 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 05:49:36,507 INFO Full Res H5 Metrics: {'SAM': np.float64(0.14296520587670433), 'ERGAS': np.float64(15.784571579372559), 'Q_avg': np.float64(0.9870554550577033), 'D_lambda': np.float64(0.0031770045750378747), 'D_s': np.float64(0.028416551196601508), 'HQNR': np.float64(0.9685011114996721)}
+2025-05-29 05:49:36,509 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 05:49:44,568 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20398062865240757), 'ERGAS': np.float64(99.59149675450047), 'Q_avg': np.float64(0.9786036934259524), 'D_lambda': np.float64(0.0045329028589423895), 'D_s': np.float64(0.024933718604863847), 'HQNR': np.float64(0.9706494120245492)}
+2025-05-29 05:49:44,569 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 05:51:08,045 INFO Full Res MAT Metrics: {'SAM': np.float64(0.1429657830508761), 'ERGAS': np.float64(15.784634203391269), 'Q_avg': np.float64(0.9870554009037997), 'D_lambda': np.float64(0.00317701740113058), 'D_s': np.float64(0.028416542061484647), 'HQNR': np.float64(0.9685011080813105)}
+2025-05-29 05:51:08,045 INFO Epoch 33: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 103.1338).
+2025-05-29 05:51:08,052 INFO Epoch 33: No improvement in key ERGAS metrics. Early stopping counter: 10/20
+2025-05-29 05:57:25,000 INFO Epoch 34: Running evaluation for early stopping...
+2025-05-29 05:57:25,001 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 05:57:32,931 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.2107488939134065), 'ERGAS': np.float64(103.69643947006978), 'Q_avg': np.float64(0.9767841517050933), 'D_lambda': np.float64(0.004683308753631256), 'D_s': np.float64(0.023298671056943294), 'HQNR': np.float64(0.9721275210056917)}
+2025-05-29 05:57:32,932 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 05:58:54,480 INFO Full Res H5 Metrics: {'SAM': np.float64(0.15107678659549634), 'ERGAS': np.float64(16.812705638623438), 'Q_avg': np.float64(0.9869555542611641), 'D_lambda': np.float64(0.0033572619243443626), 'D_s': np.float64(0.024365766877896905), 'HQNR': np.float64(0.9723626367847817)}
+2025-05-29 05:58:54,480 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 05:59:02,287 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20632584778347543), 'ERGAS': np.float64(101.17359965201504), 'Q_avg': np.float64(0.9780882655253349), 'D_lambda': np.float64(0.004585018839632786), 'D_s': np.float64(0.023397103990463707), 'HQNR': np.float64(0.9721273086288805)}
+2025-05-29 05:59:02,288 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 06:00:25,470 INFO Full Res MAT Metrics: {'SAM': np.float64(0.151076767454593), 'ERGAS': np.float64(16.812703354310372), 'Q_avg': np.float64(0.9869555534749432), 'D_lambda': np.float64(0.0033572614989909556), 'D_s': np.float64(0.024365786737800193), 'HQNR': np.float64(0.9723626173958438)}
+2025-05-29 06:00:25,471 INFO Epoch 34: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 103.6964).
+2025-05-29 06:00:25,471 INFO Epoch 34: No improvement in key ERGAS metrics. Early stopping counter: 11/20
+2025-05-29 06:06:37,591 INFO Epoch 35: Running evaluation for early stopping...
+2025-05-29 06:06:37,591 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 06:06:45,162 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20985359868807238), 'ERGAS': np.float64(103.06497083973599), 'Q_avg': np.float64(0.9766623886266876), 'D_lambda': np.float64(0.0046634133041793865), 'D_s': np.float64(0.0245241521951919), 'HQNR': np.float64(0.9709269477373166)}
+2025-05-29 06:06:45,162 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 06:08:04,957 INFO Full Res H5 Metrics: {'SAM': np.float64(0.1548454077350394), 'ERGAS': np.float64(17.099712527899673), 'Q_avg': np.float64(0.9856241520673157), 'D_lambda': np.float64(0.0034410090607786535), 'D_s': np.float64(0.028016652477469994), 'HQNR': np.float64(0.9686437910761813)}
+2025-05-29 06:08:04,960 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 06:08:13,936 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.2068089521403218), 'ERGAS': np.float64(101.15981918179511), 'Q_avg': np.float64(0.9777670618677563), 'D_lambda': np.float64(0.004595754492007152), 'D_s': np.float64(0.02528696096852729), 'HQNR': np.float64(0.9702361186539997)}
+2025-05-29 06:08:13,937 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 06:09:34,672 INFO Full Res MAT Metrics: {'SAM': np.float64(0.1548454097397956), 'ERGAS': np.float64(17.0997127258294), 'Q_avg': np.float64(0.9856241514575229), 'D_lambda': np.float64(0.0034410091053287905), 'D_s': np.float64(0.02801665437668211), 'HQNR': np.float64(0.9686437891397297)}
+2025-05-29 06:09:34,672 INFO Epoch 35: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 103.0650).
+2025-05-29 06:09:34,672 INFO Epoch 35: No improvement in key ERGAS metrics. Early stopping counter: 12/20
+2025-05-29 06:15:47,345 INFO Epoch 36: Running evaluation for early stopping...
+2025-05-29 06:15:47,345 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 06:15:54,483 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20608574448815098), 'ERGAS': np.float64(101.31465282623297), 'Q_avg': np.float64(0.9773185441366904), 'D_lambda': np.float64(0.0045796832108478), 'D_s': np.float64(0.024528734087686445), 'HQNR': np.float64(0.9710042032459585)}
+2025-05-29 06:15:54,483 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 06:17:16,700 INFO Full Res H5 Metrics: {'SAM': np.float64(0.14349389640120097), 'ERGAS': np.float64(15.835571649478817), 'Q_avg': np.float64(0.9868875255651115), 'D_lambda': np.float64(0.003188753253360022), 'D_s': np.float64(0.028654257910763502), 'HQNR': np.float64(0.9682526732793637)}
+2025-05-29 06:17:16,703 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 06:17:24,846 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20070037409339742), 'ERGAS': np.float64(98.33035929114985), 'Q_avg': np.float64(0.978916173220802), 'D_lambda': np.float64(0.004460008313186608), 'D_s': np.float64(0.025429670669974334), 'HQNR': np.float64(0.9702271327438812)}
+2025-05-29 06:17:24,847 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 06:18:48,472 INFO Full Res MAT Metrics: {'SAM': np.float64(0.14349386002723602), 'ERGAS': np.float64(15.835567842284888), 'Q_avg': np.float64(0.9868875289733451), 'D_lambda': np.float64(0.003188752445049689), 'D_s': np.float64(0.028654261862281084), 'HQNR': np.float64(0.9682526701367719)}
+2025-05-29 06:18:48,472 INFO Epoch 36: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 101.3147).
+2025-05-29 06:18:48,473 INFO Epoch 36: No improvement in key ERGAS metrics. Early stopping counter: 13/20
+2025-05-29 06:25:07,358 INFO Epoch 37: Running evaluation for early stopping...
+2025-05-29 06:25:07,359 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 06:25:14,357 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.2084507224927486), 'ERGAS': np.float64(103.04944153840991), 'Q_avg': np.float64(0.9769956362279423), 'D_lambda': np.float64(0.004632238277616637), 'D_s': np.float64(0.023270340620476206), 'HQNR': np.float64(0.9722047907400786)}
+2025-05-29 06:25:14,357 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 06:26:36,191 INFO Full Res H5 Metrics: {'SAM': np.float64(0.1529608495407091), 'ERGAS': np.float64(16.84237000993265), 'Q_avg': np.float64(0.9860219806003464), 'D_lambda': np.float64(0.003399129989793535), 'D_s': np.float64(0.027247132066848666), 'HQNR': np.float64(0.969451044551126)}
+2025-05-29 06:26:36,193 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 06:26:47,556 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.2055196594303852), 'ERGAS': np.float64(100.8298682227159), 'Q_avg': np.float64(0.9781752700469886), 'D_lambda': np.float64(0.004567103542897449), 'D_s': np.float64(0.023916591800770944), 'HQNR': np.float64(0.971627875661653)}
+2025-05-29 06:26:47,556 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 06:28:10,302 INFO Full Res MAT Metrics: {'SAM': np.float64(0.15295969894925018), 'ERGAS': np.float64(16.842244848670703), 'Q_avg': np.float64(0.9860225803628018), 'D_lambda': np.float64(0.0033991044210944484), 'D_s': np.float64(0.02724664897727087), 'HQNR': np.float64(0.9694515498375923)}
+2025-05-29 06:28:10,302 INFO Epoch 37: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 103.0494).
+2025-05-29 06:28:10,302 INFO Epoch 37: No improvement in key ERGAS metrics. Early stopping counter: 14/20
+2025-05-29 06:34:28,600 INFO Epoch 38: Running evaluation for early stopping...
+2025-05-29 06:34:28,600 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 06:34:35,609 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20713476842663545), 'ERGAS': np.float64(102.26317484816566), 'Q_avg': np.float64(0.9773567697358209), 'D_lambda': np.float64(0.004602994853925233), 'D_s': np.float64(0.023082819132870858), 'HQNR': np.float64(0.9724203520036188)}
+2025-05-29 06:34:35,609 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 06:35:57,997 INFO Full Res H5 Metrics: {'SAM': np.float64(0.15072888473284402), 'ERGAS': np.float64(16.691828334929273), 'Q_avg': np.float64(0.9866504884913756), 'D_lambda': np.float64(0.0033495307718409786), 'D_s': np.float64(0.025916397154462183), 'HQNR': np.float64(0.9708251914281792)}
+2025-05-29 06:35:57,998 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 06:36:06,071 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.2045510056028089), 'ERGAS': np.float64(100.45891003751038), 'Q_avg': np.float64(0.9783499010438035), 'D_lambda': np.float64(0.004545577902284642), 'D_s': np.float64(0.023889182721062236), 'HQNR': np.float64(0.971676497419337)}
+2025-05-29 06:36:06,071 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 06:37:29,444 INFO Full Res MAT Metrics: {'SAM': np.float64(0.15072920996286837), 'ERGAS': np.float64(16.69186367464771), 'Q_avg': np.float64(0.9866504413177163), 'D_lambda': np.float64(0.0033495379991748523), 'D_s': np.float64(0.025916371766939016), 'HQNR': np.float64(0.9708252097649295)}
+2025-05-29 06:37:29,444 INFO Epoch 38: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 102.2632).
+2025-05-29 06:37:29,444 INFO Epoch 38: No improvement in key ERGAS metrics. Early stopping counter: 15/20
+2025-05-29 06:43:41,690 INFO Epoch 39: Running evaluation for early stopping...
+2025-05-29 06:43:41,691 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 06:43:49,442 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20917513781790942), 'ERGAS': np.float64(102.662564759924), 'Q_avg': np.float64(0.9769731858444259), 'D_lambda': np.float64(0.004648336395953542), 'D_s': np.float64(0.02419569283261653), 'HQNR': np.float64(0.9712681161530128)}
+2025-05-29 06:43:49,445 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 06:45:11,199 INFO Full Res H5 Metrics: {'SAM': np.float64(0.15017721230565453), 'ERGAS': np.float64(16.58158223076464), 'Q_avg': np.float64(0.9868884497671353), 'D_lambda': np.float64(0.0033372713845701016), 'D_s': np.float64(0.025378992776394483), 'HQNR': np.float64(0.9713724860102323)}
+2025-05-29 06:45:11,200 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 06:45:18,723 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20725786399309382), 'ERGAS': np.float64(101.093679750733), 'Q_avg': np.float64(0.9776194800903303), 'D_lambda': np.float64(0.00460573031095764), 'D_s': np.float64(0.025476501257908884), 'HQNR': np.float64(0.9700381741671098)}
+2025-05-29 06:45:18,723 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 06:46:42,450 INFO Full Res MAT Metrics: {'SAM': np.float64(0.1501771784831531), 'ERGAS': np.float64(16.58157813156629), 'Q_avg': np.float64(0.9868884527384785), 'D_lambda': np.float64(0.003337270632958958), 'D_s': np.float64(0.025378997552743643), 'HQNR': np.float64(0.9713724819848327)}
+2025-05-29 06:46:42,450 INFO Epoch 39: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 102.6626).
+2025-05-29 06:46:42,450 INFO Epoch 39: No improvement in key ERGAS metrics. Early stopping counter: 16/20
+2025-05-29 06:52:56,621 INFO Epoch 40: Running evaluation for early stopping...
+2025-05-29 06:52:56,621 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 06:53:03,996 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.2107576873377662), 'ERGAS': np.float64(103.2743353224221), 'Q_avg': np.float64(0.9765459171296766), 'D_lambda': np.float64(0.004683504163061473), 'D_s': np.float64(0.024593974234691694), 'HQNR': np.float64(0.9708374833769478)}
+2025-05-29 06:53:03,997 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 06:54:25,622 INFO Full Res H5 Metrics: {'SAM': np.float64(0.14831421683692134), 'ERGAS': np.float64(16.365934477382357), 'Q_avg': np.float64(0.9868072979806835), 'D_lambda': np.float64(0.0032958714852649182), 'D_s': np.float64(0.02610517358311884), 'HQNR': np.float64(0.9706888655332989)}
+2025-05-29 06:54:25,624 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 06:54:33,665 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20736160641988977), 'ERGAS': np.float64(101.03320155560446), 'Q_avg': np.float64(0.9777237306811578), 'D_lambda': np.float64(0.004608035698219773), 'D_s': np.float64(0.02524735959991587), 'HQNR': np.float64(0.9702640297365983)}
+2025-05-29 06:54:33,666 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 06:55:54,912 INFO Full Res MAT Metrics: {'SAM': np.float64(0.14831408046369576), 'ERGAS': np.float64(16.365919271620808), 'Q_avg': np.float64(0.9868073293185798), 'D_lambda': np.float64(0.0032958684547487946), 'D_s': np.float64(0.02610516509162742), 'HQNR': np.float64(0.9706888769927536)}
+2025-05-29 06:55:54,912 INFO Epoch 40: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 103.2743).
+2025-05-29 06:55:54,912 INFO Epoch 40: No improvement in key ERGAS metrics. Early stopping counter: 17/20
+2025-05-29 07:02:11,910 INFO Epoch 41: Running evaluation for early stopping...
+2025-05-29 07:02:11,910 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 07:02:19,789 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20841521515961364), 'ERGAS': np.float64(102.81993893391652), 'Q_avg': np.float64(0.9771064610038109), 'D_lambda': np.float64(0.004631449225769191), 'D_s': np.float64(0.02306007515775611), 'HQNR': np.float64(0.9724150113453819)}
+2025-05-29 07:02:19,789 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 07:03:41,726 INFO Full Res H5 Metrics: {'SAM': np.float64(0.15162047186092759), 'ERGAS': np.float64(16.760077485508727), 'Q_avg': np.float64(0.9865076421483584), 'D_lambda': np.float64(0.0033693438191317237), 'D_s': np.float64(0.026573705052920497), 'HQNR': np.float64(0.9701519250429191)}
+2025-05-29 07:03:41,727 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 07:03:49,967 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20540463842787945), 'ERGAS': np.float64(100.65455409143725), 'Q_avg': np.float64(0.9780734277644065), 'D_lambda': np.float64(0.004564547520619544), 'D_s': np.float64(0.023665342459032096), 'HQNR': np.float64(0.9718800968658824)}
+2025-05-29 07:03:49,969 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 07:05:12,937 INFO Full Res MAT Metrics: {'SAM': np.float64(0.1516204636440968), 'ERGAS': np.float64(16.760076084446958), 'Q_avg': np.float64(0.9865076473164953), 'D_lambda': np.float64(0.0033693436365354844), 'D_s': np.float64(0.02657371916762779), 'HQNR': np.float64(0.9701519111490882)}
+2025-05-29 07:05:12,937 INFO Epoch 41: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 102.8199).
+2025-05-29 07:05:12,937 INFO Epoch 41: No improvement in key ERGAS metrics. Early stopping counter: 18/20
+2025-05-29 07:11:29,099 INFO Epoch 42: Running evaluation for early stopping...
+2025-05-29 07:11:29,099 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 07:11:36,373 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.2099486640046345), 'ERGAS': np.float64(103.66461953456516), 'Q_avg': np.float64(0.9767199965923506), 'D_lambda': np.float64(0.0046655258667696545), 'D_s': np.float64(0.023382960153341938), 'HQNR': np.float64(0.9720603780396526)}
+2025-05-29 07:11:36,376 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 07:12:58,867 INFO Full Res H5 Metrics: {'SAM': np.float64(0.15469008867842232), 'ERGAS': np.float64(17.108869920652033), 'Q_avg': np.float64(0.9861724188851074), 'D_lambda': np.float64(0.003437557526187163), 'D_s': np.float64(0.026426800215747854), 'HQNR': np.float64(0.9702316442489483)}
+2025-05-29 07:12:58,869 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 07:13:06,562 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.20852997112509333), 'ERGAS': np.float64(102.11410407287975), 'Q_avg': np.float64(0.977564267115896), 'D_lambda': np.float64(0.004633999358335408), 'D_s': np.float64(0.02405774119909885), 'HQNR': np.float64(0.9714222672526208)}
+2025-05-29 07:13:06,562 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 07:14:29,093 INFO Full Res MAT Metrics: {'SAM': np.float64(0.15469038128604756), 'ERGAS': np.float64(17.108902103581222), 'Q_avg': np.float64(0.9861723199754591), 'D_lambda': np.float64(0.003437564028578835), 'D_s': np.float64(0.026426911022222405), 'HQNR': np.float64(0.9702315279371767)}
+2025-05-29 07:14:29,093 INFO Epoch 42: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 103.6646).
+2025-05-29 07:14:29,093 INFO Epoch 42: No improvement in key ERGAS metrics. Early stopping counter: 19/20
+2025-05-29 07:20:46,968 INFO Epoch 43: Running evaluation for early stopping...
+2025-05-29 07:20:46,968 INFO Evaluating on Reduced Resolution H5: dataset/reduced_examples
+2025-05-29 07:20:54,353 INFO Reduced Res H5 Metrics: {'SAM': np.float64(0.20794558745924457), 'ERGAS': np.float64(102.65244302800575), 'Q_avg': np.float64(0.9768321763053386), 'D_lambda': np.float64(0.00462101305464988), 'D_s': np.float64(0.02386050364905855), 'HQNR': np.float64(0.9716286677703833)}
+2025-05-29 07:20:54,354 INFO Evaluating on Full Resolution H5: dataset/full_examples
+2025-05-29 07:22:16,566 INFO Full Res H5 Metrics: {'SAM': np.float64(0.1474277109503374), 'ERGAS': np.float64(16.242166288719982), 'Q_avg': np.float64(0.9868656425327407), 'D_lambda': np.float64(0.0032761713544519427), 'D_s': np.float64(0.028188531826669794), 'HQNR': np.float64(0.9686327008677423)}
+2025-05-29 07:22:16,570 INFO Evaluating on Reduced Resolution MAT: dataset/reduced_examples(1)
+2025-05-29 07:22:24,569 INFO Reduced Res MAT Metrics: {'SAM': np.float64(0.2057076997741695), 'ERGAS': np.float64(100.7578711311046), 'Q_avg': np.float64(0.9777941087523443), 'D_lambda': np.float64(0.0045712822172037666), 'D_s': np.float64(0.024304698749172647), 'HQNR': np.float64(0.9712376649130355)}
+2025-05-29 07:22:24,570 INFO Evaluating on Full Resolution MAT: dataset/full_examples(1)
+2025-05-29 07:23:48,988 INFO Full Res MAT Metrics: {'SAM': np.float64(0.1474277074754493), 'ERGAS': np.float64(16.242165857310404), 'Q_avg': np.float64(0.9868656438289747), 'D_lambda': np.float64(0.0032761712772322064), 'D_s': np.float64(0.02818853123154183), 'HQNR': np.float64(0.9686327015353398)}
+2025-05-29 07:23:48,989 INFO Epoch 43: Primary metric (Reduced Res H5 ERGAS) did not improve from 81.9977 (current: 102.6524).
+2025-05-29 07:23:48,989 INFO Epoch 43: No improvement in key ERGAS metrics. Early stopping counter: 20/20
+2025-05-29 07:23:48,990 INFO Epoch 43: Early stopping triggered after 20 epochs without improvement.
+2025-05-29 07:23:49,037 INFO Training finished early at epoch 43.
