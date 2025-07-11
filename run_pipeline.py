@@ -164,9 +164,10 @@ def evaluate_sensor(model_name: str, sensor: str, weight_path: str):
     model_class = getattr(model_module, model_info["model_class"])
     
     # 首先使用模型自身 default.json 中的通道数，保证与训练时一致；若 data_cfg 显式指定则覆盖
-    channel = model_module.cfg.get("channels", model_info["default_channels"])
-    channel = cfg.get("channels", channel)  # data_cfg 优先级更高
-    model = model_class(spectral_num=cfg["spectral_num"], channel=channel).to(device)
+    # 模型参数名为 "channels"，此处保持一致，避免传参错误
+    channels = model_module.cfg.get("channels", model_info["default_channels"])
+    channels = cfg.get("channels", channels)  # data_cfg 优先级更高
+    model = model_class(spectral_num=cfg["spectral_num"], channels=channels).to(device)
 
     # Flexible weight loading: ignore or skip mismatching parameter shapes after architecture updates.
     checkpoint = torch.load(weight_path, map_location=device)
