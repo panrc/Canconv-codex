@@ -63,10 +63,16 @@ def calculate_SSIM(img_true, img_test):
         # Convert from (C, H, W) to (H, W, C) for sewar
         img_true_hwc = np.transpose(img_true, (1, 2, 0))
         img_test_hwc = np.transpose(img_test, (1, 2, 0))
-        return ssim(img_true_hwc, img_test_hwc)
+        ssim_result = ssim(img_true_hwc, img_test_hwc)
+        if isinstance(ssim_result, tuple):
+            return ssim_result[0]
+        return ssim_result
     elif img_true.ndim == 2 and img_test.ndim == 2:
         # Single band case
-        return ssim(img_true, img_test)
+        ssim_result = ssim(img_true, img_test)
+        if isinstance(ssim_result, tuple):
+            return ssim_result[0]
+        return ssim_result
     else:
         raise ValueError("Input images must have the same dimensions")
 
@@ -441,7 +447,11 @@ def evaluate_dataset(model, data_dir, data_format, device, resolution_type, sens
                     ref_sewar_int = np.nan_to_num(ref_sewar, nan=0, posinf=sensor_range_max, neginf=0).astype(np.uint16)
                     fused_sewar_int = np.nan_to_num(fused_sewar, nan=0, posinf=sensor_range_max, neginf=0).astype(np.uint16)
                     
-                    ssim_val, _ = ssim(ref_sewar_int, fused_sewar_int)
+                    ssim_result = ssim(ref_sewar_int, fused_sewar_int)
+                    if isinstance(ssim_result, tuple):
+                        ssim_val = ssim_result[0]
+                    else:
+                        ssim_val = ssim_result
                     metrics_results["SSIM"].append(ssim_val)
                     metrics_results["PSNR"].append(psnr(ref_sewar_int, fused_sewar_int))
 
